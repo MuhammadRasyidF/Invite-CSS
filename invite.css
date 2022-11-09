@@ -33,18 +33,32 @@
 }
 
 /* ---------------Form ---------------*/
+.inv-input-normal,
+.inv-input-large,
+.inv-input-small {
+}
+
+.inv-input-rounded-normal,
+.inv-input-rounded-large,
+.inv-input-rounded-small {
+}
 
 /* Text Input */
 .inv-input-normal {
 }
+
 .inv-input-large {
 }
+
 .inv-input-small {
 }
+
 .inv-input-rounded-normal {
 }
+
 .inv-input-rounded-large {
 }
+
 .inv-input-rounded-small {
 }
 
