@@ -1,93 +1,136 @@
 /* ------------Layout System------------ */
 
 /* Columns */
-.col-1 
-.col-2
-.col-6
+.inv-col-1 {
+}
+.inv-col-2 {
+}
+.inv-col-6 {
+}
 
 /* Container */
-.container
+.inv-container {
+}
 
 /* Hero */
-.hero
-.hero-small
-.hero-medium
-.hero-large
-.hero-full
+.inv-hero {
+}
+.inv-hero-small {
+}
+.inv-hero-medium {
+}
+.inv-hero-large {
+}
+.inv-hero-full {
+}
 
 /* Grid */
-.gallery-grid
+.inv-gallery-grid {
+}
 
 /* Footer */
-.footer
+.inv-footer {
+}
 
 /* ---------------Form ---------------*/
 
 /* Text Input */
-.input-normal
-.input-large
-.input-small
-.input-rounded-normal
-.input-rounded-large
-.input-rounded-small
+.inv-input-normal {
+}
+.inv-input-large {
+}
+.inv-input-small {
+}
+.inv-input-rounded-normal {
+}
+.inv-input-rounded-large {
+}
+.inv-input-rounded-small {
+}
 
 /* Text  Area */
-.textarea-large
-.textarea-normal
-.textarea-small
+.inv-textarea-large {
+}
+.inv-textarea-normal {
+}
+.inv-textarea-small {
+}
 
 /* Select / Dropdown */
-.select
-.select-expanded
+.inv-select {
+}
+.inv-select-expanded {
+}
 
 /* ----------------Components--------------- */
 
 /* Card */
-.card
+.inv-card {
+}
 
 /* Modal */
-.modal
+.inv-modal {
+}
 
 /* Countdown */
-.countdown
+.inv-countdown {
+}
 
 /* ---------------Helpers--------------- */
 
 /* Text Color */
-.text-color-red
+.inv-text-color-red {
+}
 
 /* Text Size */
-.text-size-14
+.inv-text-size-14 {
+}
 
 /* Text Style */
-.text-style-italic
-.text-style-bold
-.text-style-underline
-.text-style-overline
-.text-style-strikethrough
+.inv-text-style-italic {
+}
+.inv-text-style-bold {
+}
+.inv-text-style-underline {
+}
+.inv-text-style-overline {
+}
+.inv-text-style-strikethrough {
+}
 
 /* ---------------Elements--------------- */
 
 /* Block */
-.add-space
+.inv-add-space {
+}
 
 /* Alert */
 
 /* Button */
 
-.button-outlined
-.button-rounded4
+.inv-button-outlined {
+}
+.inv-button-rounded {
+}
 
 /* Image */
-.img-square
-.img-round
-.img-framed
+.inv-img-square {
+}
+.inv-img-round {
+}
+.inv-img-framed {
+}
 
 /* Video */
-.video-container
-.Title
-.Icon
+.inv-video-container {
+}
+.inv-title {
+}
+.inv-icon {
+}
 
 /* Animation */
-.fadein
-.fadeout;
+.inv-fadein {
+}
+.inv-fadeout {
+}
