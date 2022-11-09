@@ -1,0 +1,20 @@
+$colors: (
+   "primary" : #626ED4,
+   "secondary" : #343549,
+   "success": #2AA39A,
+   "danger": #EC4561,
+   "warning": #F8B425,
+   "info": #38A5F8,
+   "light": #f8f8fa,
+   "dark": #575c62,
+   "muted": #EDECF1
+);
+
+$n-columns: 6;
+
+$breakpoints: (
+   "small": 576px,
+   "medium": 768px,
+   "large": 992px,
+   "huge": 1200px
+);
