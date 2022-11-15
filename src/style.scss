@@ -1,8 +1,10 @@
 @use "sass:map";
 @use "modules/variables" as variable;
+@use "modules/columns";
 @use "modules/container";
 @use "modules/hero";
 @use "modules/grid";
+@use "modules/footer";
 
 body {
   color: map.get(variable.$colors, "dark");
