@@ -13,8 +13,8 @@ $tile-spacing: 0.75rem !default;
     min-height: min-content;
     // Modifiers
     &.grid-container{
-        margin-left: $tile-spacing * -1;
-        margin-right: $tile-spacing * -1;
+        // margin-left: $tile-spacing * -1;
+        // margin-right: $tile-spacing * -1;
         margin-top: $tile-spacing * -1;
         &:last-child{
             margin-bottom: $tile-spacing * -1;
@@ -37,7 +37,6 @@ $tile-spacing: 0.75rem !default;
         & > .tile.grid-node:not(:last-child){
             margin-bottom: 1.5rem !important
         }
-        
     }
         
     // Responsiveness
@@ -47,7 +46,7 @@ $tile-spacing: 0.75rem !default;
         }
         
         @for $i from 1 through $n-columns{
-            &.is-#{$i}{
+            &.grid-column-#{$i}{
                 flex: none;
                 width: (divide($i, $n-columns)) * 100%;
             }
