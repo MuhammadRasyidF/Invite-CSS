@@ -1,0 +1,51 @@
+@import "utilities/mixins";
+@import "utilities/functions";
+@import "variables";
+
+$dimensions: 16 24 32 48 64 96 128 256 512 !default;
+$radius-rounded: 9999px !default;
+
+.image {
+  display: block;
+  position: relative;
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+    &.is-rounded {
+      border-radius: $radius-rounded;
+    }
+  }
+  &.is-fullwidth {
+    width: 100%;
+  }
+  // Ratio
+  &.is-square,
+  &.is-width-rectangle, //persegi panjang
+  &.is-height-rectangle {
+    // persegi panjang memanjang
+    img,
+    .has-ratio {
+      @include overlay;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &.is-square {
+    padding-top: 100%;
+  }
+  &.is-width-rectangle {
+    padding-top: 50%;
+  }
+  &.is-height-rectangle {
+    padding-top: 166.6666%;
+  }
+
+  // Sizes
+  @each $dimension in $dimensions {
+    &.is-#{$dimension}x#{$dimension} {
+      height: $dimension * 1px;
+      width: $dimension * 1px;
+    }
+  }
+}

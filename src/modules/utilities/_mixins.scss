@@ -2,14 +2,20 @@
 @import "../variables";
 
 @mixin at-breakpoint($breakpoint) {
-    @if map-has-key($breakpoints, $breakpoint) {
-        @media (min-width: map-get($breakpoints, $breakpoint)) {
-            @content;
-        }
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
     }
-
-    @else {
-        @warn "Tidak ada breakpoint bernama `#{$breakpoint}`. "
+  } @else {
+    @warn "Tidak ada breakpoint bernama `#{$breakpoint}`. "
             + "Breakpoint yang tersedia: #{map-keys($breakpoints)}.";
-    }
+  }
+}
+
+@mixin overlay($offset: 0) {
+  bottom: $offset;
+  left: $offset;
+  position: absolute;
+  right: $offset;
+  top: $offset;
 }

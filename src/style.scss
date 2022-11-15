@@ -3,6 +3,8 @@
 @use "modules/container";
 @use "modules/hero";
 @use "modules/grid";
+@use "modules/card";
+@use "modules/image";
 
 body {
   color: map.get(variable.$colors, "dark");
