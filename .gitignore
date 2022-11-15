@@ -1,2 +1,3 @@
-/dist/
-!/dist/index.html
+.vscode/
+dist/
+!dist/index.html
