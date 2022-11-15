@@ -1,0 +1,40 @@
+.container {
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  max-width: none !important;
+  padding-left: 32px;
+  padding-right: 32px;
+  width: 100%;
+}
+.container.no-gap {
+  max-width: none !important;
+  padding-left: 32px;
+  padding-right: 32px;
+  width: 100%;
+}
+
+.banner {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: red;
+}
+.banner .title {
+  color: black;
+}
+.banner .subtitle {
+  color: grey;
+}
+.banner-fullheight {
+  min-height: 100vh;
+}
+.banner-halfheight {
+  min-height: 50vh;
+}
+
+body {
+  color: #575c62;
+  margin: 0;
+}/*# sourceMappingURL=style.css.map */

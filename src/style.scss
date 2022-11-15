@@ -1,6 +1,9 @@
 @use "sass:map";
 @use "modules/variables" as variable;
+@use "modules/container";
+@use "modules/hero";
 
 body {
-    color: map.get(variable.$colors, "dark");
+  color: map.get(variable.$colors, "dark");
+  margin: 0;
 }
