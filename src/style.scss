@@ -2,8 +2,13 @@
 @use "modules/variables" as variable;
 @use "modules/container";
 @use "modules/hero";
+@use "modules/grid";
 
 body {
   color: map.get(variable.$colors, "dark");
   margin: 0;
+}
+
+.box {
+  border-style: solid;
 }

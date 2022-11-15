@@ -1,0 +1,58 @@
+@import "utilities/mixins";
+@import "utilities/functions";
+@import "variables";
+
+$tile-spacing: 0.75rem !default;
+
+.grid{
+    align-items: stretch;
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-height: min-content;
+    // Modifiers
+    &.grid-container{
+        margin-left: $tile-spacing * -1;
+        margin-right: $tile-spacing * -1;
+        margin-top: $tile-spacing * -1;
+        &:last-child{
+            margin-bottom: $tile-spacing * -1;
+        }
+        &:not(:last-child){
+            margin-bottom: $tile-spacing;
+        }
+    }
+        
+    &.grid-node{
+        margin: 0 !important
+    }
+        
+    &.grid-parent{
+        padding: $tile-spacing
+    }
+        
+    &.grid-vertical{
+        flex-direction: column;
+        & > .tile.grid-node:not(:last-child){
+            margin-bottom: 1.5rem !important
+        }
+        
+    }
+        
+    // Responsiveness
+    @include at-breakpoint('large'){
+        &:not(.is-child){
+            display: flex;
+        }
+        
+        @for $i from 1 through $n-columns{
+            &.is-#{$i}{
+                flex: none;
+                width: (divide($i, $n-columns)) * 100%;
+            }
+        }
+    }
+            
+}
+  
