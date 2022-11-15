@@ -43,8 +43,6 @@
   min-height: min-content;
 }
 .grid.grid-container {
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
   margin-top: -0.75rem;
 }
 .grid.grid-container:last-child {
@@ -69,27 +67,27 @@
   .grid:not(.is-child) {
     display: flex;
   }
-  .grid.is-1 {
+  .grid.grid-column-1 {
     flex: none;
     width: 16.6666667%;
   }
-  .grid.is-2 {
+  .grid.grid-column-2 {
     flex: none;
     width: 33.33333335%;
   }
-  .grid.is-3 {
+  .grid.grid-column-3 {
     flex: none;
     width: 50%;
   }
-  .grid.is-4 {
+  .grid.grid-column-4 {
     flex: none;
     width: 66.6666667%;
   }
-  .grid.is-5 {
+  .grid.grid-column-5 {
     flex: none;
     width: 83.33333335%;
   }
-  .grid.is-6 {
+  .grid.grid-column-6 {
     flex: none;
     width: 100%;
   }
