@@ -1,3 +1,31 @@
+.row {
+  display: flex;
+}
+
+.column-1 {
+  width: 16.6666667%;
+}
+
+.column-2 {
+  width: 33.33333335%;
+}
+
+.column-3 {
+  width: 50%;
+}
+
+.column-4 {
+  width: 66.6666667%;
+}
+
+.column-5 {
+  width: 83.33333335%;
+}
+
+.column-6 {
+  width: 100%;
+}
+
 .container {
   flex-grow: 1;
   margin: 0 auto;
@@ -40,6 +68,8 @@
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
   min-height: min-content;
 }
 .grid.grid-container {
@@ -93,6 +123,15 @@
     flex: none;
     width: 100%;
   }
+}
+
+.footer {
+  background-color: #eee;
+  color: #5a6491;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  bottom: 0;
 }
 
 body {

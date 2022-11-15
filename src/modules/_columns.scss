@@ -1,0 +1,12 @@
+@use 'variables.scss' as var;
+@import 'utilities/functions';
+
+.row {
+    display: flex;
+}
+
+@for $i from 1 through var.$n-columns {
+    .column-#{$i} {
+       width: (divide($i, 6)) * 100%;
+    }
+ }
