@@ -68,11 +68,11 @@
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  min-height: -webkit-min-content;
-  min-height: -moz-min-content;
   min-height: min-content;
 }
 .grid.grid-container {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
   margin-top: -0.75rem;
 }
 .grid.grid-container:last-child {
@@ -90,11 +90,11 @@
 .grid.grid-vertical {
   flex-direction: column;
 }
-.grid.grid-vertical > .tile.grid-node:not(:last-child) {
+.grid.grid-vertical > .grid.grid-node:not(:last-child) {
   margin-bottom: 1.5rem !important;
 }
 @media (min-width: 992px) {
-  .grid:not(.is-child) {
+  .grid:not(.grid-node) {
     display: flex;
   }
   .grid.grid-column-1 {
