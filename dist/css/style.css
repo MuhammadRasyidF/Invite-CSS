@@ -30,10 +30,7 @@
   flex-grow: 1;
   margin: 0 auto;
   position: relative;
-  max-width: none !important;
-  padding-left: 32px;
-  padding-right: 32px;
-  width: 100%;
+  width: auto;
 }
 .container.no-gap {
   max-width: none !important;
@@ -41,25 +38,59 @@
   padding-right: 32px;
   width: 100%;
 }
+.container.text-centered {
+  text-align: center !important;
+}
 
 .banner {
   align-items: stretch;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: red;
 }
 .banner .title {
   color: black;
+  font-size: 2rem;
 }
 .banner .subtitle {
   color: grey;
+}
+.banner.has-background {
+  position: relative;
+  overflow: hidden;
+}
+.banner.align-item-bottom {
+  justify-content: flex-end;
+}
+.banner.align-item-top {
+  justify-content: flex-start;
+}
+.banner-background {
+  position: absolute;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.banner-background.transparent {
+  opacity: 0.8;
 }
 .banner-fullheight {
   min-height: 100vh;
 }
 .banner-halfheight {
   min-height: 50vh;
+}
+.banner-fullheight .banner-body, .banner-halfheight .banner-body {
+  align-items: center;
+  display: flex;
+  padding: 3rem 3rem;
+  z-index: 2;
+}
+.banner-fullheight .banner-body > container, .banner-halfheight .banner-body > container {
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .grid {

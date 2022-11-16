@@ -1,17 +1,13 @@
 @use "sass:map";
 @use "modules/columns";
 @use "modules/container";
-<<<<<<< HEAD
 @use "modules/banner";
-=======
-@use "modules/hero";
 @use "modules/grid";
 @use "modules/card";
 @use "modules/image";
 @use "modules/footer";
 
 @import "modules/variables";
->>>>>>> 5dfe9b23c89bb6205a2659198d49834a49c44a46
 
 body {
   color: map.get($colors, "dark");
