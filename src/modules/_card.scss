@@ -1,0 +1,18 @@
+// @use "sass:map";
+// @import "utilities/mixins";
+// @import "utilities/functions";
+// @import "variables";
+
+// $card-color: map.get($colors, "light") !default;
+// $card-background-color: map.get($colors, "light") !default;
+// $card-shadow: map.get($colors, "dark") !default;
+// $card-radius: 0.25rem !default;
+
+// .card {
+//   background-color: $card-background-color;
+//   border-radius: $card-radius;
+//   box-shadow: $card-shadow;
+//   color: $card-color;
+//   max-width: 100%;
+//   position: relative;
+// }
