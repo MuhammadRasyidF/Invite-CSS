@@ -2,16 +2,16 @@
   flex-grow: 1;
   margin: 0 auto;
   position: relative;
-  max-width: none !important;
-  padding-left: 32px;
-  padding-right: 32px;
-  width: 100%;
+  width: auto;
 }
 .container.no-gap {
   max-width: none !important;
   padding-left: 32px;
   padding-right: 32px;
   width: 100%;
+}
+.container.text-centered {
+  text-align: center !important;
 }
 
 .banner {
@@ -30,8 +30,14 @@
 .banner-fullheight {
   min-height: 100vh;
 }
+.banner-fullheight .banner-body {
+  align-items: center;
+}
 .banner-halfheight {
   min-height: 50vh;
+}
+.banner-halfheight .banner-body {
+  align-items: center;
 }
 
 body {

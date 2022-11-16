@@ -15,9 +15,17 @@
 
   &-fullheight {
     min-height: 100vh;
+
+    .banner-body {
+      align-items: center;
+    }
   }
 
   &-halfheight {
     min-height: 50vh;
+
+    .banner-body {
+      align-items: center;
+    }
   }
 }
