@@ -1,5 +1,6 @@
 @use "sass:map";
 @use "modules/utilities/reset";
+@use "modules/utilities/generic";
 @use "modules/columns";
 @use "modules/container";
 @use "modules/banner";
@@ -21,6 +22,5 @@ body {
   padding: 1.25rem;
   display: block;
   border-radius: 6px;
-  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
-    0 0 0 1px rgb(10 10 10 / 2%);
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
 }
