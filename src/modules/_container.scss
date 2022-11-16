@@ -2,15 +2,16 @@
   flex-grow: 1;
   margin: 0 auto;
   position: relative;
-  max-width: none !important;
-  padding-left: 32px;
-  padding-right: 32px;
-  width: 100%;
+  width: auto;
 
   &.no-gap {
     max-width: none !important;
     padding-left: 32px;
     padding-right: 32px;
     width: 100%;
+  }
+
+  &.text-centered {
+    text-align: center !important;
   }
 }
