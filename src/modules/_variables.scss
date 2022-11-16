@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $colors: (
   "primary": #626ed4,
   "secondary": #343549,
@@ -6,7 +8,10 @@ $colors: (
   "warning": #f8b425,
   "info": #38a5f8,
   "light": #f8f8fa,
+  "dark-lightest": #6c7279,
   "dark": #575c62,
+  "darker": #2f3235,
+  "light-invert": #000000,
   "muted": #edecf1,
 );
 
@@ -17,4 +22,15 @@ $breakpoints: (
   "medium": 768px,
   "large": 992px,
   "huge": 1200px,
+);
+
+// Effects
+$shadow: 0 0.5em 1em -0.125em rgba(map.get($colors, "light-invert"), 0.1), 0 0px 0 1px rgba(map.get($colors, "light-invert"), 0.02) !default;
+
+$tickness: (
+  "light": 300,
+  "normal": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
 );

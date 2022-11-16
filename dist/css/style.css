@@ -1,3 +1,83 @@
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+td:not([align]),
+th:not([align]) {
+  text-align: inherit;
+}
+
 .row {
   display: flex;
 }
@@ -68,6 +148,8 @@
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
   min-height: min-content;
 }
 .grid.grid-container {
@@ -123,6 +205,85 @@
   }
 }
 
+.card {
+  background-color: #f8f8fa;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5em 1em -0.125em rgba(0, 0, 0, 0.1), 0 0px 0 1px rgba(0, 0, 0, 0.02);
+  color: #575c62;
+  max-width: 100%;
+  position: relative;
+}
+
+.card-footer:first-child, .card-content:first-child, .card-header:first-child {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.card-footer:last-child, .card-content:last-child, .card-header:last-child {
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.card-header {
+  background-color: transparent;
+  align-items: stretch;
+  box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.card-header-title {
+  align-items: center;
+  color: #2f3235;
+  display: flex;
+  flex-grow: 1;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+}
+.card-header-title.is-centered {
+  justify-content: center;
+}
+
+.card-image {
+  display: block;
+  position: relative;
+}
+.card-image:first-child img {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.card-image:last-child img {
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.card-content {
+  background-color: transparent;
+  padding: 1.5rem;
+}
+
+.card-footer {
+  background-color: transparent;
+  border-top: 1px solid #6c7279;
+  align-items: stretch;
+  display: flex;
+}
+
+.card-footer-item {
+  align-items: center;
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: center;
+  padding: 0.75rem;
+}
+.card-footer-item:not(:last-child) {
+  border-right: 1px solid #6c7279;
+}
+
+.card .media:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
 .image {
   display: block;
   position: relative;
@@ -140,7 +301,8 @@
 }
 .image.is-square img,
 .image.is-square .has-ratio, .image.is-width-rectangle img,
-.image.is-width-rectangle .has-ratio, .image.is-height-rectangle img,
+.image.is-width-rectangle .has-ratio, .image.is-md-width-rectangle img,
+.image.is-md-width-rectangle .has-ratio, .image.is-height-rectangle img,
 .image.is-height-rectangle .has-ratio {
   bottom: 0;
   left: 0;
@@ -155,6 +317,9 @@
 }
 .image.is-width-rectangle {
   padding-top: 50%;
+}
+.image.is-md-width-rectangle {
+  padding-top: 75%;
 }
 .image.is-height-rectangle {
   padding-top: 166.6666%;
@@ -194,6 +359,61 @@
 .image.is-512x512 {
   height: 512px;
   width: 512px;
+}
+
+.media {
+  align-items: flex-start;
+  display: flex;
+  text-align: inherit;
+}
+.media .content:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+.media .media {
+  border-top: 1px solid rgba(108, 114, 121, 0.5);
+  display: flex;
+  padding-top: 0.75rem;
+}
+.media .media .content:not(:last-child),
+.media .media .control:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.media .media .media {
+  padding-top: 0.5rem;
+}
+.media .media + .media {
+  margin-top: 0.5rem;
+}
+.media + .media {
+  border-top: 1px solid rgba(108, 114, 121, 0.5);
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+.media.is-large + .media {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.media-left,
+.media-right {
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.media-left {
+  margin-right: 1rem;
+}
+
+.media-right {
+  margin-left: 1rem;
+}
+
+.media-content {
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  text-align: inherit;
 }
 
 .footer {

@@ -1,10 +1,12 @@
 @use "sass:map";
+@use "modules/utilities/reset";
 @use "modules/columns";
 @use "modules/container";
 @use "modules/hero";
 @use "modules/grid";
 @use "modules/card";
 @use "modules/image";
+@use "modules/media";
 @use "modules/footer";
 
 @import "modules/variables";

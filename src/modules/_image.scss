@@ -22,6 +22,7 @@ $radius-rounded: 9999px !default;
   // Ratio
   &.is-square,
   &.is-width-rectangle, //persegi panjang
+  &.is-md-width-rectangle,
   &.is-height-rectangle {
     // persegi panjang memanjang
     img,
@@ -36,6 +37,9 @@ $radius-rounded: 9999px !default;
   }
   &.is-width-rectangle {
     padding-top: 50%;
+  }
+  &.is-md-width-rectangle {
+    padding-top: 75%;
   }
   &.is-height-rectangle {
     padding-top: 166.6666%;
