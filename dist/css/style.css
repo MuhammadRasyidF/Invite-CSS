@@ -87,9 +87,7 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
-          text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 article,
@@ -221,10 +219,8 @@ table th:not([align]) {
 }
 .banner-background {
   position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
+  object-fit: cover;
+  object-position: center center;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -255,8 +251,6 @@ table th:not([align]) {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  min-height: -webkit-min-content;
-  min-height: -moz-min-content;
   min-height: min-content;
 }
 .grid.grid-container:last-child {
@@ -525,6 +519,34 @@ table th:not([align]) {
   padding-top: 2rem;
   padding-bottom: 2rem;
   bottom: 0;
+}
+
+.countdown-container {
+  font-size: 12em;
+  line-height: 1.2em;
+  overflow: hidden !important;
+  height: 1.2em;
+  text-align: center;
+  width: 0.7em;
+}
+
+.countdown-box .countdown-digit {
+  position: relative;
+}
+
+@keyframes countdownOut {
+  0% {
+    margin-top: 0em;
+  }
+  30% {
+    margin-top: -1.2em;
+  }
+  100% {
+    margin-top: -1.2em;
+  }
+}
+.countdown-digit-after {
+  animation: countdownOut 1.5s;
 }
 
 body {
