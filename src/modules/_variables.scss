@@ -8,7 +8,7 @@ $colors: (
   "warning": #f8b425,
   "info": #38a5f8,
   "light": #f8f8fa,
-  "dark-lightest": #d3d3d3,
+  "dark-lightest": #acacac,
   "dark": #575c62,
   "darker": #2f3235,
   "light-invert": #000000,
@@ -34,3 +34,5 @@ $tickness: (
   "semibold": 600,
   "bold": 700,
 );
+
+$tablet: 769px !default;
