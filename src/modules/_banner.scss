@@ -1,7 +1,11 @@
+@use "variables" as var;
+
 $banner-body-padding: 3rem 1.5rem !default;
 $banner-body-padding-small: 1.5rem !default;
 $banner-body-padding-medium: 9rem 4.5rem !default;
 $banner-body-padding-large: 18rem 6rem !default;
+
+$banner-colors: var.$colors;
 
 .banner {
   align-items: stretch;
@@ -9,13 +13,19 @@ $banner-body-padding-large: 18rem 6rem !default;
   flex-direction: column;
   justify-content: center;
 
+  @each $name, $color in $banner-colors {
+    &.color-#{$name} {
+      background-color: $color;
+    }
+  }
+
   .title {
-    color: black;
+    color: white;
     font-size: 2rem;
   }
 
   .subtitle {
-    color: grey;
+    color: whitesmoke;
   }
 
   &.has-background {

@@ -48,12 +48,40 @@
   flex-direction: column;
   justify-content: center;
 }
+.banner.color-primary {
+  background-color: #626ed4;
+}
+.banner.color-secondary {
+  background-color: #343549;
+}
+.banner.color-success {
+  background-color: #2aa39a;
+}
+.banner.color-danger {
+  background-color: #ec4561;
+}
+.banner.color-warning {
+  background-color: #f8b425;
+}
+.banner.color-info {
+  background-color: #38a5f8;
+}
+.banner.color-light {
+  background-color: #f8f8fa;
+}
+.banner.color-dark {
+  background-color: #575c62;
+}
+.banner.color-muted {
+  background-color: #edecf1;
+}
+
 .banner .title {
-  color: black;
+  color: white;
   font-size: 2rem;
 }
 .banner .subtitle {
-  color: grey;
+  color: whitesmoke;
 }
 .banner.has-background {
   position: relative;
