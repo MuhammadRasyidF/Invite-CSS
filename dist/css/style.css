@@ -379,7 +379,7 @@ table th:not([align]) {
   padding: 0.75rem;
 }
 .card-footer-item:not(:last-child) {
-  border-right: 1px solid #acacac;
+  border-left: 1px solid #acacac;
 }
 
 .card .media:not(:last-child) {
@@ -504,11 +504,11 @@ table th:not([align]) {
 }
 
 .media-left {
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .media-right {
-  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .media-content {
@@ -641,7 +641,7 @@ table th:not([align]) {
   background: none;
   height: 40px;
   position: fixed;
-  left: 20px;
+  right: 20px;
   top: 20px;
   width: 40px;
 }
@@ -699,7 +699,7 @@ table th:not([align]) {
   flex-direction: column;
   max-height: calc(100vh - 40px);
   overflow: hidden;
-  -ms-overflow-y: visible;
+  overflow-y: visible;
 }
 
 .modal-card-head,
@@ -733,7 +733,7 @@ table th:not([align]) {
   border-top: 1px solid #acacac;
 }
 .modal-card-foot .button:not(:last-child) {
-  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 .modal-card-body {

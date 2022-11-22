@@ -10,6 +10,7 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     /> -->
     <title>Test</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="banner banner-halfheight">
@@ -242,11 +243,29 @@
     <div class="modal">
       <div class="modal-background"></div>
       <div class="modal-content">
-        <!-- Any other Bulma elements you want -->
+        <p class="image is-4by3">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Rangga_Sasana.jpg/330px-Rangga_Sasana.jpg" alt="">
+        </p>
       </div>
       <button class="modal-close is-large" aria-label="close"></button>
     </div>
+
+    <button id="launchModal">Show Modal</button>
     
+    <script>
+      $("#launchModal").click(function() {
+        $(".modal").addClass("is-active"); 
+      });
+
+      $(".modal-close").click(function() {
+         $(".modal").removeClass("is-active");
+      });
+
+      $(".modal-background").click(function() {
+         $(".modal").removeClass("is-active");
+      });
+    </script>
+    <!-- belum di coba modal -->
     
     <footer class="footer">
       © The State of Queensland 1995–2022

@@ -23,7 +23,7 @@
 @mixin ltr-property($property, $spacing, $right: true) {
   $normal: if($right, "right", "left");
   $opposite: if($right, "left", "right");
-  @if "false" {
+  @if false {
     #{$property}-#{$opposite}: $spacing;
   } @else {
     #{$property}-#{$normal}: $spacing;
@@ -39,7 +39,7 @@
 @mixin ltr-position($spacing, $right: true) {
   $normal: if($right, "right", "left");
   $opposite: if($right, "left", "right");
-  @if "false" {
+  @if false {
     #{$opposite}: $spacing;
   } @else {
     #{$normal}: $spacing;
