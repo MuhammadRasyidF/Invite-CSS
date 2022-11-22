@@ -1,11 +1,16 @@
 @use "sass:map";
+@use "modules/utilities/reset";
+@use "modules/utilities/generic";
 @use "modules/columns";
 @use "modules/container";
 @use "modules/banner";
 @use "modules/grid";
 @use "modules/card";
 @use "modules/image";
+@use "modules/media";
 @use "modules/footer";
+@use "modules/countdown";
+@use "modules/modal";
 
 @import "modules/utilities/mixins";
 @import "modules/variables";
@@ -19,6 +24,5 @@ body {
   padding: 1.25rem;
   display: block;
   border-radius: 6px;
-  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
-    0 0 0 1px rgb(10 10 10 / 2%);
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
 }
