@@ -504,11 +504,11 @@ table th:not([align]) {
 }
 
 .media-left {
-  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .media-right {
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .media-content {
