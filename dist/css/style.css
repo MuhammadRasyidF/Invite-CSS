@@ -379,7 +379,7 @@ table th:not([align]) {
   padding: 0.75rem;
 }
 .card-footer-item:not(:last-child) {
-  border-left: 1px solid #acacac;
+  border-right: 1px solid #acacac;
 }
 
 .card .media:not(:last-child) {
