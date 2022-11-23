@@ -15,6 +15,8 @@ $colors: (
   "muted": #edecf1,
 );
 
+$custom-colors : ();
+
 $n-columns: 6;
 
 $breakpoints: (
@@ -86,7 +88,7 @@ $warning-invert: findColorInvert($warning) !default;
 $danger-invert: findColorInvert($danger) !default;
 $link-invert: findColorInvert($link) !default;
 
-$invcolors: mergeColorMaps(
+$invcolors: map.merge(
   (
     "white": (
       $white,
