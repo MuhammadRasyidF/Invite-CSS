@@ -6,7 +6,7 @@
 
 $button-color: map.get($colors, "darker") !default;
 $button-background-color: map.get($colors, "light") !default;
-$button-family: false !default;
+$button-family: true !default; //untuk ganti font
 
 $button-border-color: map.get($colors, "dark-lightest") !default;
 $button-border-width: 1px !default;
@@ -16,6 +16,11 @@ $button-padding-horizontal: 1em !default;
 
 $button-hover-color: map.get($colors, "darker") !default;
 $button-hover-border-color: map.get($colors, "dark-lightest") !default;
+
+$button-focus-color: $link-focus !default;
+$button-focus-border-color: $link-focus-border !default;
+$button-focus-box-shadow-size: 0 0 0 0.125em !default;
+$button-focus-box-shadow-color: bulmaRgba($link, 0.25) !default;
 
 $button-colors: $invcolors !default;
 $button-responsive-sizes: (
@@ -43,7 +48,7 @@ $button-responsive-sizes: (
 
 .button {
   @include control;
-  @extend %unselectable;
+  @include unselectable;
   background-color: $button-background-color;
   border-color: $button-border-color;
   border-width: $button-border-width;
@@ -89,52 +94,75 @@ $button-responsive-sizes: (
     border-color: $button-hover-border-color;
     color: $button-hover-color;
   }
-}
-// Colors
-@each $name, $pair in $button-colors {
-  $color: nth($pair, 1);
-  $color-invert: nth($pair, 2);
-  &.is-#{$name} {
-    background-color: $color;
-    border-color: transparent;
-    color: $color-invert;
-  }
-  &:hover,
-  &.is-hovered {
-    background-color: invDarken($color, 2.5%);
-    border-color: transparent;
-    color: $color-invert;
-  }
-  &:active,
-  &.is-active {
-    background-color: invDarken($color, 5%);
-    border-color: transparent;
-    color: $color-invert;
-  }
-}
 
-// Sizes
-&.is-small {
-  @include button-small;
-}
-&.is-normal {
-  @include button-normal;
-}
-&.is-medium {
-  @include button-medium;
-}
-&.is-large {
-  @include button-large;
-}
-// Modifiers
-&.is-fullwidth {
-  display: flex;
-  width: 100%;
-}
-&.is-rounded {
-  border-radius: $radius-rounded;
-  padding-left: calc(#{$button-padding-horizontal} + 0.25em);
-  padding-right: calc(#{$button-padding-horizontal} + 0.25em);
+  &:focus,
+  &.is-focused {
+    border-color: $button-focus-border-color;
+    color: $button-focus-color;
+    &:not(:active) {
+      box-shadow: $button-focus-box-shadow-size $button-focus-box-shadow-color;
+    }
+  }
+
+  // Colors
+  @each $name, $pair in $button-colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+    &.is-#{$name} {
+      background-color: $color;
+      border-color: transparent;
+      color: $color-invert;
+      &:hover,
+      &.is-hovered {
+        background-color: invDarken($color, 2.5%);
+        border-color: transparent;
+        color: $color-invert;
+      }
+      &:active,
+      &.is-active {
+        background-color: invDarken($color, 5%);
+        border-color: transparent;
+        color: $color-invert;
+      }
+      &.is-outlined {
+        background-color: transparent;
+        border-color: $color;
+        color: $color;
+        &:hover,
+        &.is-hovered,
+        &:focus,
+        &.is-focused {
+          background-color: $color;
+          border-color: $color;
+          color: $color-invert;
+        }
+      }
+    }
+  }
+
+  // Sizes
+  &.is-small {
+    @include button-small;
+  }
+  &.is-normal {
+    @include button-normal;
+  }
+  &.is-medium {
+    @include button-medium;
+  }
+  &.is-large {
+    @include button-large;
+  }
+  // Modifiers
+  &.is-fullwidth {
+    display: flex;
+    width: 100%;
+  }
+  &.is-rounded {
+    border-radius: $radius-rounded;
+    padding-left: calc(#{$button-padding-horizontal} + 0.25em);
+    padding-right: calc(#{$button-padding-horizontal} + 0.25em);
+  }
 }
 
 .buttons {
