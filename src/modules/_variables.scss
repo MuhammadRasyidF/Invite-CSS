@@ -2,7 +2,6 @@
 
 $colors: (
   "primary": #626ed4,
-  "secondary": #343549,
   "success": #2aa39a,
   "danger": #ec4561,
   "warning": #f8b425,
@@ -15,6 +14,9 @@ $colors: (
   "muted": #edecf1,
 );
 
+$background: hsl(0, 0%, 96%);
+$scheme-main: hsl(0, 0%, 100%);
+
 $n-columns: 6;
 
 $breakpoints: (
@@ -25,7 +27,8 @@ $breakpoints: (
 );
 
 // Effects
-$shadow: 0 0.5em 1em -0.125em rgba(map.get($colors, "light-invert"), 0.1), 0 0px 0 1px rgba(map.get($colors, "light-invert"), 0.02) !default;
+$shadow: 0 0.5em 1em -0.125em rgba(map.get($colors, "light-invert"), 0.1),
+  0 0px 0 1px rgba(map.get($colors, "light-invert"), 0.02) !default;
 
 $tickness: (
   "light": 300,
@@ -36,3 +39,5 @@ $tickness: (
 );
 
 $tablet: 769px !default;
+
+$rtl: false !default;

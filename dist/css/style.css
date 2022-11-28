@@ -87,9 +87,7 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
-          text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 article,
@@ -116,10 +114,6 @@ a {
 a strong {
   color: currentColor;
 }
-a:hover {
-  color: #343549;
-}
-
 img {
   height: auto;
   max-width: 100%;
@@ -205,9 +199,6 @@ table th:not([align]) {
 .banner.color-primary {
   background-color: #626ed4;
 }
-.banner.color-secondary {
-  background-color: #343549;
-}
 .banner.color-success {
   background-color: #2aa39a;
 }
@@ -223,13 +214,21 @@ table th:not([align]) {
 .banner.color-light {
   background-color: #f8f8fa;
 }
+.banner.color-dark-lightest {
+  background-color: #acacac;
+}
 .banner.color-dark {
   background-color: #575c62;
+}
+.banner.color-darker {
+  background-color: #2f3235;
+}
+.banner.color-light-invert {
+  background-color: #000000;
 }
 .banner.color-muted {
   background-color: #edecf1;
 }
-
 .banner .title {
   color: white;
   font-size: 2rem;
@@ -249,10 +248,8 @@ table th:not([align]) {
 }
 .banner-background {
   position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
+  object-fit: cover;
+  object-position: center center;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -283,8 +280,6 @@ table th:not([align]) {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  min-height: -webkit-min-content;
-  min-height: -moz-min-content;
   min-height: min-content;
 }
 .grid.grid-container:last-child {
@@ -568,18 +563,6 @@ table th:not([align]) {
   position: relative;
 }
 
-@-webkit-keyframes countdownOut {
-  0% {
-    margin-top: 0em;
-  }
-  30% {
-    margin-top: -1.2em;
-  }
-  100% {
-    margin-top: -1.2em;
-  }
-}
-
 @keyframes countdownOut {
   0% {
     margin-top: 0em;
@@ -592,8 +575,7 @@ table th:not([align]) {
   }
 }
 .countdown-digit-after {
-  -webkit-animation: countdownOut 1.5s;
-          animation: countdownOut 1.5s;
+  animation: countdownOut 1.5s;
 }
 
 .modal {
@@ -771,6 +753,82 @@ table th:not([align]) {
   flex-shrink: 1;
   overflow: auto;
   padding: 20px;
+}
+
+.alert {
+  margin-bottom: 1.5rem;
+  background-color: hsl(0deg, 0%, 96%);
+  border-radius: 4px;
+  position: relative;
+  padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+}
+.alert a:not(.button):not(.dropdown-item) {
+  color: currentColor;
+  text-decoration: underline;
+}
+.alert strong {
+  color: currentColor;
+}
+.alert code,
+.alert pre {
+  background: hsl(0deg, 0%, 100%);
+}
+.alert pre code {
+  background: transparent;
+}
+.alert > .delete {
+  left: 0.5rem;
+  position: absolute;
+  top: 0.5rem;
+}
+.alert .title,
+.alert .subtitle,
+.alert .content {
+  color: currentColor;
+}
+.alert.color-primary {
+  background-color: #626ed4;
+  color: #fff;
+}
+.alert.color-success {
+  background-color: #2aa39a;
+  color: #fff;
+}
+.alert.color-danger {
+  background-color: #ec4561;
+  color: #fff;
+}
+.alert.color-warning {
+  background-color: #f8b425;
+  color: rgba(0, 0, 0, 0.7);
+}
+.alert.color-info {
+  background-color: #38a5f8;
+  color: #fff;
+}
+.alert.color-light {
+  background-color: #f8f8fa;
+  color: rgba(0, 0, 0, 0.7);
+}
+.alert.color-dark-lightest {
+  background-color: #acacac;
+  color: #fff;
+}
+.alert.color-dark {
+  background-color: #575c62;
+  color: #fff;
+}
+.alert.color-darker {
+  background-color: #2f3235;
+  color: #fff;
+}
+.alert.color-light-invert {
+  background-color: #000000;
+  color: #fff;
+}
+.alert.color-muted {
+  background-color: #edecf1;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 body {
