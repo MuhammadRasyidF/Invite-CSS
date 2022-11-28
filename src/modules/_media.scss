@@ -55,11 +55,11 @@ $media-level-2-spacing: 0.5rem !default;
 }
 
 .media-left {
-  @include ltr-property("margin", $media-spacing, false);
+  @include ltr-property("margin", $media-spacing);
 }
 
 .media-right {
-  @include ltr-property("margin", $media-spacing);
+  @include ltr-property("margin", $media-spacing, false);
 }
 
 .media-content {

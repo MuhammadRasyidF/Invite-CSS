@@ -35,7 +35,7 @@
 @mixin ltr-property($property, $spacing, $right: true) {
   $normal: if($right, "right", "left");
   $opposite: if($right, "left", "right");
-  @if "false" {
+  @if false {
     #{$property}-#{$opposite}: $spacing;
   } @else {
     #{$property}-#{$normal}: $spacing;
@@ -51,7 +51,7 @@
 @mixin ltr-position($spacing, $right: true) {
   $normal: if($right, "right", "left");
   $opposite: if($right, "left", "right");
-  @if "false" {
+  @if false {
     #{$opposite}: $spacing;
   } @else {
     #{$normal}: $spacing;
@@ -149,4 +149,59 @@
   @media screen and (min-width: $device) {
     @content;
   }
+}
+
+@mixin until($device) {
+  @media screen and (max-width: ($device - 1px)) {
+    @content;
+  }
+}
+
+@mixin between($from, $until) {
+  @media screen and (min-width: $from) and (max-width: ($until - 1px)) {
+    @content;
+  }
+}
+
+// The button sizes use mixins so they can be used at different breakpoints
+@mixin button-small {
+  &:not(.is-rounded) {
+    border-radius: $radius-small;
+  }
+  font-size: $size-small;
+}
+@mixin button-normal {
+  font-size: $size-normal;
+}
+@mixin button-medium {
+  font-size: $size-medium;
+}
+@mixin button-large {
+  font-size: $size-large;
+}
+
+@mixin breakpoint($name) {
+  $breakpoint: map-get($breakpoints, $name);
+  @if $breakpoint {
+    $from: map-get($breakpoint, "from");
+    $until: map-get($breakpoint, "until");
+    @if $from and $until {
+      @include between($from, $until);
+      @content;
+    } @else if $from {
+      @include from($from);
+      @content;
+    } @else if $until {
+      @include until($until);
+      @content;
+    }
+  }
+}
+
+@mixin unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

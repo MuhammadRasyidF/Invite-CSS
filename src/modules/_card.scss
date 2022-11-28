@@ -102,7 +102,7 @@ $card-media-margin: 1.5rem !default;
   justify-content: center;
   padding: $card-footer-padding;
   &:not(:last-child) {
-    @include ltr-property("border", $card-footer-border-top, false);
+    @include ltr-property("border", $card-footer-border-top);
   }
 }
 

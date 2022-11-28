@@ -1,0 +1,266 @@
+@use "sass:map";
+@import "utilities/mixins";
+@import "utilities/functions";
+@import "utilities/control";
+@import "variables";
+
+$button-color: map.get($colors, "darker") !default;
+$button-background-color: map.get($colors, "light") !default;
+$button-family: true !default; //untuk ganti font
+
+$button-border-color: map.get($colors, "dark-lightest") !default;
+$button-border-width: 1px !default;
+
+$button-padding-vertical: calc(0.5em - #{$button-border-width}) !default;
+$button-padding-horizontal: 1em !default;
+
+$button-hover-color: map.get($colors, "darker") !default;
+$button-hover-border-color: map.get($colors, "dark-lightest") !default;
+
+$button-focus-color: $link-focus !default;
+$button-focus-border-color: $link-focus-border !default;
+$button-focus-box-shadow-size: 0 0 0 0.125em !default;
+$button-focus-box-shadow-color: bulmaRgba($link, 0.25) !default;
+
+$button-colors: $invcolors !default;
+$button-responsive-sizes: (
+  "mobile": (
+    "small": (
+      $size-small * 0.75,
+    ),
+    "normal": (
+      $size-small * 0.875,
+    ),
+    "medium": $size-small,
+    "large": $size-normal,
+  ),
+  "tablet-only": (
+    "small": (
+      $size-small * 0.875,
+    ),
+    "normal": (
+      $size-small,
+    ),
+    "medium": $size-normal,
+    "large": $size-medium,
+  ),
+) !default;
+
+.button {
+  @include control;
+  @include unselectable;
+  background-color: $button-background-color;
+  border-color: $button-border-color;
+  border-width: $button-border-width;
+  color: $button-color;
+  cursor: pointer;
+  @if $button-family {
+    font-family: $button-family;
+  }
+  justify-content: center;
+  padding-bottom: $button-padding-vertical;
+  padding-left: $button-padding-horizontal;
+  padding-right: $button-padding-horizontal;
+  padding-top: $button-padding-vertical;
+  text-align: center;
+  white-space: nowrap;
+  strong {
+    color: inherit;
+  }
+  .icon {
+    &,
+    &.is-small,
+    &.is-medium,
+    &.is-large {
+      height: 1.5em;
+      width: 1.5em;
+    }
+    &:first-child:not(:last-child) {
+      @include ltr-property("margin", calc(#{-0.5 * $button-padding-horizontal} - #{$button-border-width}), false);
+      @include ltr-property("margin", $button-padding-horizontal * 0.25);
+    }
+    &:last-child:not(:first-child) {
+      @include ltr-property("margin", $button-padding-horizontal * 0.25, false);
+      @include ltr-property("margin", calc(#{-0.5 * $button-padding-horizontal} - #{$button-border-width}));
+    }
+    &:first-child:last-child {
+      margin-left: calc(#{-0.5 * $button-padding-horizontal} - #{$button-border-width});
+      margin-right: calc(#{-0.5 * $button-padding-horizontal} - #{$button-border-width});
+    }
+  }
+  // States
+  &:hover,
+  &.is-hovered {
+    border-color: $button-hover-border-color;
+    color: $button-hover-color;
+  }
+
+  &:focus,
+  &.is-focused {
+    border-color: $button-focus-border-color;
+    color: $button-focus-color;
+    &:not(:active) {
+      box-shadow: $button-focus-box-shadow-size $button-focus-box-shadow-color;
+    }
+  }
+
+  // Colors
+  @each $name, $pair in $button-colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+    &.is-#{$name} {
+      background-color: $color;
+      border-color: transparent;
+      color: $color-invert;
+      &:hover,
+      &.is-hovered {
+        background-color: invDarken($color, 2.5%);
+        border-color: transparent;
+        color: $color-invert;
+      }
+      &:active,
+      &.is-active {
+        background-color: invDarken($color, 5%);
+        border-color: transparent;
+        color: $color-invert;
+      }
+      &.is-outlined {
+        background-color: transparent;
+        border-color: $color;
+        color: $color;
+        &:hover,
+        &.is-hovered,
+        &:focus,
+        &.is-focused {
+          background-color: $color;
+          border-color: $color;
+          color: $color-invert;
+        }
+      }
+    }
+  }
+
+  // Sizes
+  &.is-small {
+    @include button-small;
+  }
+  &.is-normal {
+    @include button-normal;
+  }
+  &.is-medium {
+    @include button-medium;
+  }
+  &.is-large {
+    @include button-large;
+  }
+  // Modifiers
+  &.is-fullwidth {
+    display: flex;
+    width: 100%;
+  }
+  &.is-rounded {
+    border-radius: $radius-rounded;
+    padding-left: calc(#{$button-padding-horizontal} + 0.25em);
+    padding-right: calc(#{$button-padding-horizontal} + 0.25em);
+  }
+}
+
+.buttons {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  .button {
+    margin-bottom: 0.5rem;
+    &:not(:last-child):not(.is-fullwidth) {
+      @include ltr-property("margin", 0.5rem);
+    }
+  }
+  &:last-child {
+    margin-bottom: -0.5rem;
+  }
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  // Sizes
+  &.are-small {
+    .button:not(.is-normal):not(.is-medium):not(.is-large) {
+      @include button-small;
+    }
+  }
+  &.are-medium {
+    .button:not(.is-small):not(.is-normal):not(.is-large) {
+      @include button-medium;
+    }
+  }
+  &.are-large {
+    .button:not(.is-small):not(.is-normal):not(.is-medium) {
+      @include button-large;
+    }
+  }
+  &.has-addons {
+    .button {
+      &:not(:first-child) {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+      }
+      &:not(:last-child) {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        @include ltr-property("margin", -1px);
+      }
+      &:last-child {
+        @include ltr-property("margin", 0);
+      }
+      &:hover,
+      &.is-hovered {
+        z-index: 2;
+      }
+      &.is-selected {
+        z-index: 3;
+      }
+      &:hover {
+        z-index: 4;
+      }
+      &.is-expanded {
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
+    }
+    &.is-centered {
+      justify-content: center;
+      &:not(.has-addons) {
+        .button:not(.is-fullwidth) {
+          margin-left: 0.25rem;
+          margin-right: 0.25rem;
+        }
+      }
+    }
+    &.is-right {
+      justify-content: flex-end;
+      &:not(.has-addons) {
+        .button:not(.is-fullwidth) {
+          margin-left: 0.25rem;
+          margin-right: 0.25rem;
+        }
+      }
+    }
+  }
+}
+
+@each $bp-name, $bp-sizes in $button-responsive-sizes {
+  @include breakpoint($bp-name) {
+    @each $size, $value in $bp-sizes {
+      @if $size != "normal" {
+        .button.is-responsive.is-#{$size} {
+          font-size: $value;
+        }
+      } @else {
+        .button.is-responsive,
+        .button.is-responsive.is-normal {
+          font-size: $value;
+        }
+      }
+    }
+  }
+}

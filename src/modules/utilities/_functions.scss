@@ -81,6 +81,13 @@
   @return rgba($color, $alpha);
 }
 
+@function invDarken($color, $amount) {
+  @if type-of($color) != "color" {
+    @return $color;
+  }
+  @return darken($color, $amount);
+}
+
 @function findColorInvert($color) {
   @if (colorLuminance($color) > 0.55) {
     @return rgba(#000, 0.7);
