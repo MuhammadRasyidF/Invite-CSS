@@ -386,26 +386,26 @@ table th:not([align]) {
   margin-bottom: 1.5rem;
 }
 
-.image {
+.inv-image {
   display: block;
   position: relative;
 }
-.image img {
+.inv-image img {
   display: block;
   height: auto;
   width: 100%;
 }
-.image img.is-rounded {
+.inv-image img.is-rounded {
   border-radius: 9999px;
 }
-.image.is-fullwidth {
+.inv-image.is-fullwidth {
   width: 100%;
 }
-.image.is-square img,
-.image.is-square .has-ratio, .image.is-width-rectangle img,
-.image.is-width-rectangle .has-ratio, .image.is-md-width-rectangle img,
-.image.is-md-width-rectangle .has-ratio, .image.is-height-rectangle img,
-.image.is-height-rectangle .has-ratio {
+.inv-image.is-square img,
+.inv-image.is-square .has-ratio, .inv-image.is-width-rectangle img,
+.inv-image.is-width-rectangle .has-ratio, .inv-image.is-md-width-rectangle img,
+.inv-image.is-md-width-rectangle .has-ratio, .inv-image.is-height-rectangle img,
+.inv-image.is-height-rectangle .has-ratio {
   bottom: 0;
   left: 0;
   position: absolute;
@@ -414,51 +414,51 @@ table th:not([align]) {
   height: 100%;
   width: 100%;
 }
-.image.is-square {
+.inv-image.is-square {
   padding-top: 100%;
 }
-.image.is-width-rectangle {
+.inv-image.is-width-rectangle {
   padding-top: 50%;
 }
-.image.is-md-width-rectangle {
+.inv-image.is-md-width-rectangle {
   padding-top: 75%;
 }
-.image.is-height-rectangle {
+.inv-image.is-height-rectangle {
   padding-top: 166.6666%;
 }
-.image.is-16x16 {
+.inv-image.is-16x16 {
   height: 16px;
   width: 16px;
 }
-.image.is-24x24 {
+.inv-image.is-24x24 {
   height: 24px;
   width: 24px;
 }
-.image.is-32x32 {
+.inv-image.is-32x32 {
   height: 32px;
   width: 32px;
 }
-.image.is-48x48 {
+.inv-image.is-48x48 {
   height: 48px;
   width: 48px;
 }
-.image.is-64x64 {
+.inv-image.is-64x64 {
   height: 64px;
   width: 64px;
 }
-.image.is-96x96 {
+.inv-image.is-96x96 {
   height: 96px;
   width: 96px;
 }
-.image.is-128x128 {
+.inv-image.is-128x128 {
   height: 128px;
   width: 128px;
 }
-.image.is-256x256 {
+.inv-image.is-256x256 {
   height: 256px;
   width: 256px;
 }
-.image.is-512x512 {
+.inv-image.is-512x512 {
   height: 512px;
   width: 512px;
 }
