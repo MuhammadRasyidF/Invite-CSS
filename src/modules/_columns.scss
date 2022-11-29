@@ -3,10 +3,13 @@
 
 .row {
     display: flex;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 @for $i from 1 through var.$n-columns {
     .column-#{$i} {
        width: (divide($i, 6)) * 100%;
+       flex: none;
     }
  }
