@@ -154,30 +154,38 @@ table th:not([align]) {
 
 .row {
   display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .column-1 {
   width: 16.6666667%;
+  flex: none;
 }
 
 .column-2 {
   width: 33.33333335%;
+  flex: none;
 }
 
 .column-3 {
   width: 50%;
+  flex: none;
 }
 
 .column-4 {
   width: 66.6666667%;
+  flex: none;
 }
 
 .column-5 {
   width: 83.33333335%;
+  flex: none;
 }
 
 .column-6 {
   width: 100%;
+  flex: none;
 }
 
 .container {
@@ -305,6 +313,9 @@ table th:not([align]) {
     flex: none;
     width: 100%;
   }
+}
+.grid.grid-flex:not(.grid-node) {
+  display: flex;
 }
 
 .inv-card {
@@ -528,44 +539,52 @@ table th:not([align]) {
 }
 
 .countdown-container {
-  font-size: 12em;
-  line-height: 1.2em;
   overflow: hidden !important;
-  height: 1.2em;
   text-align: center;
-  width: 0.7em;
 }
 
 .countdown-box .countdown-digit {
   position: relative;
 }
 
-@-webkit-keyframes countdownOut {
+@-webkit-keyframes fadeInAndOut {
   0% {
-    margin-top: 0em;
+    opacity: 0;
   }
-  30% {
-    margin-top: -1.2em;
+  20% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
   }
   100% {
-    margin-top: -1.2em;
+    opacity: 0;
   }
 }
 
-@keyframes countdownOut {
+@keyframes fadeInAndOut {
   0% {
-    margin-top: 0em;
+    opacity: 0;
   }
-  30% {
-    margin-top: -1.2em;
+  20% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
   }
   100% {
-    margin-top: -1.2em;
+    opacity: 0;
   }
 }
-.countdown-digit-after {
-  -webkit-animation: countdownOut 1.5s;
-          animation: countdownOut 1.5s;
+.countdown-animate {
+  -webkit-animation: fadeInAndOut 1s linear;
+          animation: fadeInAndOut 1s linear;
 }
 
 .inv-modal {
