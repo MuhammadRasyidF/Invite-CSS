@@ -46,7 +46,7 @@ $button-responsive-sizes: (
   ),
 ) !default;
 
-.button {
+.inv-button {
   @include control;
   @include unselectable;
   background-color: $button-background-color;
@@ -165,12 +165,12 @@ $button-responsive-sizes: (
   }
 }
 
-.buttons {
+.inv-buttons {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  .button {
+  .inv-button {
     margin-bottom: 0.5rem;
     &:not(:last-child):not(.is-fullwidth) {
       @include ltr-property("margin", 0.5rem);
@@ -184,22 +184,22 @@ $button-responsive-sizes: (
   }
   // Sizes
   &.are-small {
-    .button:not(.is-normal):not(.is-medium):not(.is-large) {
+    .inv-button:not(.is-normal):not(.is-medium):not(.is-large) {
       @include button-small;
     }
   }
   &.are-medium {
-    .button:not(.is-small):not(.is-normal):not(.is-large) {
+    .inv-button:not(.is-small):not(.is-normal):not(.is-large) {
       @include button-medium;
     }
   }
   &.are-large {
-    .button:not(.is-small):not(.is-normal):not(.is-medium) {
+    .inv-button:not(.is-small):not(.is-normal):not(.is-medium) {
       @include button-large;
     }
   }
   &.has-addons {
-    .button {
+    .inv-button {
       &:not(:first-child) {
         border-bottom-left-radius: 0;
         border-top-left-radius: 0;
@@ -230,7 +230,7 @@ $button-responsive-sizes: (
     &.is-centered {
       justify-content: center;
       &:not(.has-addons) {
-        .button:not(.is-fullwidth) {
+        .inv-button:not(.is-fullwidth) {
           margin-left: 0.25rem;
           margin-right: 0.25rem;
         }
@@ -239,7 +239,7 @@ $button-responsive-sizes: (
     &.is-right {
       justify-content: flex-end;
       &:not(.has-addons) {
-        .button:not(.is-fullwidth) {
+        .inv-button:not(.is-fullwidth) {
           margin-left: 0.25rem;
           margin-right: 0.25rem;
         }
@@ -252,12 +252,12 @@ $button-responsive-sizes: (
   @include breakpoint($bp-name) {
     @each $size, $value in $bp-sizes {
       @if $size != "normal" {
-        .button.is-responsive.is-#{$size} {
+        .inv-button.is-responsive.is-#{$size} {
           font-size: $value;
         }
       } @else {
-        .button.is-responsive,
-        .button.is-responsive.is-normal {
+        .inv-button.is-responsive,
+        .inv-button.is-responsive.is-normal {
           font-size: $value;
         }
       }
