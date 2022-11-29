@@ -3,22 +3,24 @@
 .countdown-container {
   // border: 2px solid black;
   // font-family: Arial, sans-serif;
-  font-size: 12em;
-  line-height: 1.2em;
+  // font-size: 12em;
+  // line-height: 1.2em;
   overflow: hidden !important;
-  height: 1.2em;
+  // height: 1.2em;
   text-align: center;
-  width: 0.7em;
+  // width: 0.7em;
 }
 .countdown-box .countdown-digit {
   position: relative;
 }
 
-@keyframes countdownOut {
-  0% {margin-top: 0em;}
-  30% {margin-top: -1.2em;}
-  100% {margin-top: -1.2em;}
+@keyframes fadeInAndOut {
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  60% {opacity: 1;}
+  80% {opacity: 0.9;}
+  100% {opacity: 0;}
 }
-.countdown-digit-after {
-    animation: countdownOut 1.5s;
+.countdown-animate {
+    animation: fadeInAndOut 1s linear;
 }
