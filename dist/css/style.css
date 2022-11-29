@@ -568,7 +568,7 @@ table th:not([align]) {
           animation: countdownOut 1.5s;
 }
 
-.modal {
+.inv-modal {
   bottom: 0;
   left: 0;
   position: absolute;
@@ -582,7 +582,7 @@ table th:not([align]) {
   position: fixed;
   z-index: 40;
 }
-.modal.is-active {
+.inv-modal.is-active {
   display: flex;
 }
 
