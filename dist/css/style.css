@@ -1198,6 +1198,291 @@ table th:not([align]) {
   margin-right: 0.25rem;
 }
 
+.input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2.5em;
+  justify-content: flex-start;
+  line-height: 1.5;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: calc(0.75em - 1px);
+  padding-right: calc(0.75em - 1px);
+  padding-top: calc(0.5em - 1px);
+  position: relative;
+  vertical-align: top;
+  background-color: hsl(0deg, 0%, 100%);
+  border-color: #dbdbdb;
+  border-radius: 4px;
+  color: #363636;
+  box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
+  max-width: 100%;
+  width: 100%;
+}
+.input:focus, .input.is-focused, .input:active, .input.is-active {
+  outline: none;
+}
+.input[disabled], fieldset[disabled] .input {
+  cursor: not-allowed;
+}
+.input + placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+.input:hover, .input.is-hovered {
+  border-color: #b5b5b5;
+}
+.input:focus, .input.is-focused, .input:active, .input.is-active {
+  border-color: #485fc7;
+  box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);
+}
+.input[disabled], fieldset[disabled] .input {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: none;
+  color: #7a7a7a;
+}
+.input[disabled] + placeholder, fieldset[disabled] .input + placeholder {
+  color: rgba(122, 122, 122, 0.3);
+}
+.input[readonly] {
+  box-shadow: none;
+}
+.input.is-primary {
+  border-color: #626ed4;
+}
+.input.is-primary:focus, .input.is-primary.is-focused, .input.is-primary:active, .input.is-primary.is-active {
+  box-shadow: 0 0 0 0.125em rgba(98, 110, 212, 0.25);
+}
+.input.is-success {
+  border-color: #2aa39a;
+}
+.input.is-success:focus, .input.is-success.is-focused, .input.is-success:active, .input.is-success.is-active {
+  box-shadow: 0 0 0 0.125em rgba(42, 163, 154, 0.25);
+}
+.input.is-danger {
+  border-color: #ec4561;
+}
+.input.is-danger:focus, .input.is-danger.is-focused, .input.is-danger:active, .input.is-danger.is-active {
+  box-shadow: 0 0 0 0.125em rgba(236, 69, 97, 0.25);
+}
+.input.is-warning {
+  border-color: #f8b425;
+}
+.input.is-warning:focus, .input.is-warning.is-focused, .input.is-warning:active, .input.is-warning.is-active {
+  box-shadow: 0 0 0 0.125em rgba(248, 180, 37, 0.25);
+}
+.input.is-info {
+  border-color: #38a5f8;
+}
+.input.is-info:focus, .input.is-info.is-focused, .input.is-info:active, .input.is-info.is-active {
+  box-shadow: 0 0 0 0.125em rgba(56, 165, 248, 0.25);
+}
+.input.is-light {
+  border-color: #f8f8fa;
+}
+.input.is-light:focus, .input.is-light.is-focused, .input.is-light:active, .input.is-light.is-active {
+  box-shadow: 0 0 0 0.125em rgba(248, 248, 250, 0.25);
+}
+.input.is-dark-lightest {
+  border-color: #acacac;
+}
+.input.is-dark-lightest:focus, .input.is-dark-lightest.is-focused, .input.is-dark-lightest:active, .input.is-dark-lightest.is-active {
+  box-shadow: 0 0 0 0.125em rgba(172, 172, 172, 0.25);
+}
+.input.is-dark {
+  border-color: #575c62;
+}
+.input.is-dark:focus, .input.is-dark.is-focused, .input.is-dark:active, .input.is-dark.is-active {
+  box-shadow: 0 0 0 0.125em rgba(87, 92, 98, 0.25);
+}
+.input.is-darker {
+  border-color: #2f3235;
+}
+.input.is-darker:focus, .input.is-darker.is-focused, .input.is-darker:active, .input.is-darker.is-active {
+  box-shadow: 0 0 0 0.125em rgba(47, 50, 53, 0.25);
+}
+.input.is-light-invert {
+  border-color: #000000;
+}
+.input.is-light-invert:focus, .input.is-light-invert.is-focused, .input.is-light-invert:active, .input.is-light-invert.is-active {
+  box-shadow: 0 0 0 0.125em rgba(0, 0, 0, 0.25);
+}
+.input.is-muted {
+  border-color: #edecf1;
+}
+.input.is-muted:focus, .input.is-muted.is-focused, .input.is-muted:active, .input.is-muted.is-active {
+  box-shadow: 0 0 0 0.125em rgba(237, 236, 241, 0.25);
+}
+.input.is-fullwidth {
+  display: block;
+  width: 100%;
+}
+.input.is-inline {
+  display: inline;
+  width: auto;
+}
+.input.is-rounded {
+  border-radius: 9999px;
+  padding-left: calc(calc(0.75em - 1px) + 0.375em);
+  padding-right: calc(calc(0.75em - 1px) + 0.375em);
+}
+.input.is-static {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2.5em;
+  justify-content: flex-start;
+  line-height: 1.5;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: calc(0.75em - 1px);
+  padding-right: calc(0.75em - 1px);
+  padding-top: calc(0.5em - 1px);
+  position: relative;
+  vertical-align: top;
+  background-color: hsl(0deg, 0%, 100%);
+  border-color: #dbdbdb;
+  border-radius: 4px;
+  color: #363636;
+  box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  max-width: 100%;
+  min-width: 100%;
+  padding: calc(0.75em - 1px);
+  resize: vertical;
+}
+.textarea:focus, .textarea.is-focused, .textarea:active, .textarea.is-active {
+  outline: none;
+}
+.textarea[disabled], fieldset[disabled] .textarea {
+  cursor: not-allowed;
+}
+.textarea + placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+.textarea:hover, .textarea.is-hovered {
+  border-color: #b5b5b5;
+}
+.textarea:focus, .textarea.is-focused, .textarea:active, .textarea.is-active {
+  border-color: #485fc7;
+  box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);
+}
+.textarea[disabled], fieldset[disabled] .textarea {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: none;
+  color: #7a7a7a;
+}
+.textarea[disabled] + placeholder, fieldset[disabled] .textarea + placeholder {
+  color: rgba(122, 122, 122, 0.3);
+}
+.textarea[readonly] {
+  box-shadow: none;
+}
+.textarea.is-primary {
+  border-color: #626ed4;
+}
+.textarea.is-primary:focus, .textarea.is-primary.is-focused, .textarea.is-primary:active, .textarea.is-primary.is-active {
+  box-shadow: 0 0 0 0.125em rgba(98, 110, 212, 0.25);
+}
+.textarea.is-success {
+  border-color: #2aa39a;
+}
+.textarea.is-success:focus, .textarea.is-success.is-focused, .textarea.is-success:active, .textarea.is-success.is-active {
+  box-shadow: 0 0 0 0.125em rgba(42, 163, 154, 0.25);
+}
+.textarea.is-danger {
+  border-color: #ec4561;
+}
+.textarea.is-danger:focus, .textarea.is-danger.is-focused, .textarea.is-danger:active, .textarea.is-danger.is-active {
+  box-shadow: 0 0 0 0.125em rgba(236, 69, 97, 0.25);
+}
+.textarea.is-warning {
+  border-color: #f8b425;
+}
+.textarea.is-warning:focus, .textarea.is-warning.is-focused, .textarea.is-warning:active, .textarea.is-warning.is-active {
+  box-shadow: 0 0 0 0.125em rgba(248, 180, 37, 0.25);
+}
+.textarea.is-info {
+  border-color: #38a5f8;
+}
+.textarea.is-info:focus, .textarea.is-info.is-focused, .textarea.is-info:active, .textarea.is-info.is-active {
+  box-shadow: 0 0 0 0.125em rgba(56, 165, 248, 0.25);
+}
+.textarea.is-light {
+  border-color: #f8f8fa;
+}
+.textarea.is-light:focus, .textarea.is-light.is-focused, .textarea.is-light:active, .textarea.is-light.is-active {
+  box-shadow: 0 0 0 0.125em rgba(248, 248, 250, 0.25);
+}
+.textarea.is-dark-lightest {
+  border-color: #acacac;
+}
+.textarea.is-dark-lightest:focus, .textarea.is-dark-lightest.is-focused, .textarea.is-dark-lightest:active, .textarea.is-dark-lightest.is-active {
+  box-shadow: 0 0 0 0.125em rgba(172, 172, 172, 0.25);
+}
+.textarea.is-dark {
+  border-color: #575c62;
+}
+.textarea.is-dark:focus, .textarea.is-dark.is-focused, .textarea.is-dark:active, .textarea.is-dark.is-active {
+  box-shadow: 0 0 0 0.125em rgba(87, 92, 98, 0.25);
+}
+.textarea.is-darker {
+  border-color: #2f3235;
+}
+.textarea.is-darker:focus, .textarea.is-darker.is-focused, .textarea.is-darker:active, .textarea.is-darker.is-active {
+  box-shadow: 0 0 0 0.125em rgba(47, 50, 53, 0.25);
+}
+.textarea.is-light-invert {
+  border-color: #000000;
+}
+.textarea.is-light-invert:focus, .textarea.is-light-invert.is-focused, .textarea.is-light-invert:active, .textarea.is-light-invert.is-active {
+  box-shadow: 0 0 0 0.125em rgba(0, 0, 0, 0.25);
+}
+.textarea.is-muted {
+  border-color: #edecf1;
+}
+.textarea.is-muted:focus, .textarea.is-muted.is-focused, .textarea.is-muted:active, .textarea.is-muted.is-active {
+  box-shadow: 0 0 0 0.125em rgba(237, 236, 241, 0.25);
+}
+.textarea.is-fullwidth {
+  display: block;
+  width: 100%;
+}
+.textarea.is-inline {
+  display: inline;
+  width: auto;
+}
+.textarea:not([rows]) {
+  max-height: 40em;
+  min-height: 8em;
+}
+.textarea[rows] {
+  height: initial;
+}
+.textarea.has-fixed-size {
+  resize: none;
+}
+
 body {
   color: #575c62;
   margin: 0;
