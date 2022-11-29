@@ -1,3 +1,29 @@
+/* Countdown JavaScript Library
+ * Author: BIG MOM FAMILY
+ * Version: 0.2
+ * 
+ * Untuk menambahkan komponen countdown ke dalam Document 
+ * secara mudah, hanya perlu menginstansiasikan Countdown
+ * class dan memanggil method tick() setiap detiknya.
+ *
+ * Contoh penggunaan terdapat pada file script.js
+ * 
+ * Untuk mengubah animasi bisa melakukan style overriding
+ * pada class CSS ".countdown-animate".
+ * 
+ * Default animation:
+ * @keyframes fadeInAndOut {
+ *   0% {opacity: 0;}
+ *   20% {opacity: 1;}
+ *   60% {opacity: 1;}
+ *   80% {opacity: 0.9;}
+ *   100% {opacity: 0;}
+ * }
+ * .countdown-animate {
+ *   animation: fadeInAndOut 1s linear;
+ * }
+ */
+
 class CountdownDigit {
     start = 9;
     end = 0;
@@ -217,9 +243,11 @@ class Countdown {
         var nextNumber = digit.get();
         dom.innerHTML = '';
         if(currentNumber != nextNumber) {
-            dom.innerHTML += '<div class="countdown-digit countdown-digit-after">'+currentNumber+'</div>';
-        } 
-        dom.innerHTML += '<div class="countdown-digit" id="'+ dom.id +'-now">'+nextNumber+'</div>';
+            dom.innerHTML += '<div class="countdown-digit countdown-animate" id="'+ dom.id +'-now">'+nextNumber+'</div>';
+        } else {
+            dom.innerHTML += '<div class="countdown-digit" id="'+ dom.id +'-now">'+nextNumber+'</div>';
+        }
+        
     }
 
     draw() {
@@ -241,12 +269,3 @@ class Countdown {
         this.setDraw(this.dom.seconds[1], this.digit.seconds[1]);
     }
 }
-
-// Usage to 31 December 2022, 23:59:59
-var cnt = new Countdown("cntd", new Date("2022-12-31 23:59:59 GMT+0700")); 
-
-setInterval(function() {
-    cnt.tick();
-    cnt.draw();
-  
-}, 1000);

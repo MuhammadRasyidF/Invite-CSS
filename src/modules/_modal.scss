@@ -35,7 +35,7 @@ $modal-card-body-padding: 20px !default;
 
 $modal-breakpoint: $tablet !default;
 
-.modal {
+.inv-modal {
   @include overlay;
   align-items: center;
   display: none;
