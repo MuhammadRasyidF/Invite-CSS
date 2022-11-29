@@ -314,6 +314,9 @@ table th:not([align]) {
     width: 100%;
   }
 }
+.grid.grid-flex:not(.grid-node) {
+  display: flex;
+}
 
 .inv-card {
   background-color: #f8f8fa;
@@ -536,44 +539,52 @@ table th:not([align]) {
 }
 
 .countdown-container {
-  font-size: 12em;
-  line-height: 1.2em;
   overflow: hidden !important;
-  height: 1.2em;
   text-align: center;
-  width: 0.7em;
 }
 
 .countdown-box .countdown-digit {
   position: relative;
 }
 
-@-webkit-keyframes countdownOut {
+@-webkit-keyframes fadeInAndOut {
   0% {
-    margin-top: 0em;
+    opacity: 0;
   }
-  30% {
-    margin-top: -1.2em;
+  20% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
   }
   100% {
-    margin-top: -1.2em;
+    opacity: 0;
   }
 }
 
-@keyframes countdownOut {
+@keyframes fadeInAndOut {
   0% {
-    margin-top: 0em;
+    opacity: 0;
   }
-  30% {
-    margin-top: -1.2em;
+  20% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
   }
   100% {
-    margin-top: -1.2em;
+    opacity: 0;
   }
 }
-.countdown-digit-after {
-  -webkit-animation: countdownOut 1.5s;
-          animation: countdownOut 1.5s;
+.countdown-animate {
+  -webkit-animation: fadeInAndOut 1s linear;
+          animation: fadeInAndOut 1s linear;
 }
 
 .modal {
