@@ -304,7 +304,7 @@ table th:not([align]) {
   display: flex;
 }
 
-.card {
+.inv-card {
   background-color: #f8f8fa;
   border-radius: 0.25rem;
   box-shadow: 0 0.5em 1em -0.125em rgba(0, 0, 0, 0.1), 0 0px 0 1px rgba(0, 0, 0, 0.02);
@@ -379,7 +379,7 @@ table th:not([align]) {
   border-right: 1px solid #acacac;
 }
 
-.card .media:not(:last-child) {
+.inv-card .media:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
