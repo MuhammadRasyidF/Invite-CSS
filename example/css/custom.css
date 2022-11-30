@@ -10,8 +10,7 @@ body {
 
 .banner-invite {
   text-align: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/banner.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -164,7 +163,7 @@ body {
   font-weight: 400;
   font-size: 3em;
   color: #be8862;
-} 
+}
 .countdown-text {
   padding-top: 0 !important;
   font-family: "Imprima";
@@ -224,4 +223,9 @@ body {
 .counter-grid {
   text-align: center;
   right: 0;
+}
+
+.inv-image.is-256x256 {
+  width: 20vw;
+  height: auto;
 }
