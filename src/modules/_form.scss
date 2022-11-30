@@ -1,4 +1,5 @@
 @use "variables" as var;
+@import "utilities/mixins";
 
 $control-radius: 4px !default;
 
@@ -17,7 +18,10 @@ $textarea-padding: $control-padding-horizontal !default;
 $textarea-max-height: 40em !default;
 $textarea-min-height: 8em !default;
 $textarea-colors: var.$colors !default;
+$select-colors: var.$colors !default;
 
+$input-height: $control-height !default;
+$input-arrow: #485fc7 !default;
 $input-background-color: var.$scheme-main !default;
 $input-border-color: #dbdbdb !default;
 $input-radius: $control-radius !default;
@@ -61,6 +65,7 @@ $radius-rounded: 9999px !default;
 
 @mixin input {
   @include control();
+  margin-bottom: 1rem;
   background-color: $input-background-color;
   border-color: $input-border-color;
   border-radius: $input-radius;
@@ -69,13 +74,13 @@ $radius-rounded: 9999px !default;
     color: $input-placeholder-color;
   }
   &:hover,
-  &.is-hovered {
+  &.state-hovered {
     border-color: $input-hover-border-color;
   }
   &:focus,
-  &.is-focused,
+  &.state-focused,
   &:active,
-  &.is-active {
+  &.state-active {
     border-color: $input-focus-border-color;
     box-shadow: 0 0 0 0.125em rgba(#485fc7, 0.25);
   }
@@ -102,12 +107,12 @@ $radius-rounded: 9999px !default;
   // Colors
   @each $name, $pair in $textarea-colors {
     $color: nth($pair, 1);
-    &.is-#{$name} {
+    &.color-#{$name} {
       border-color: $color;
       &:focus,
-      &.is-focused,
+      &.state-focused,
       &:active,
-      &.is-active {
+      &.state-active {
         box-shadow: 0 0 0 0.125em rgba($color, 0.25);
       }
     }
@@ -123,7 +128,7 @@ $radius-rounded: 9999px !default;
   }
 }
 
-.input {
+.inv-input {
   @include input-textarea();
   &.is-rounded {
     border-radius: $radius-rounded;
@@ -139,7 +144,7 @@ $radius-rounded: 9999px !default;
   }
 }
 
-.textarea {
+.inv-textarea {
   @include input-textarea();
   display: block;
   max-width: 100%;
@@ -155,5 +160,67 @@ $radius-rounded: 9999px !default;
   }
   &.has-fixed-size {
     resize: none;
+  }
+}
+
+.select {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  vertical-align: top;
+  &:not(.is-multiple) {
+    height: $input-height;
+  }
+  &:not(.is-multiple):not(.state-loading) {
+    &::after {
+      border: 3px solid transparent;
+      border-radius: 2px;
+      border-right: 0;
+      border-top: 0;
+      content: " ";
+      display: block;
+      height: 0.625em;
+      margin-top: -0.4375em;
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      transform: rotate(-45deg);
+      transform-origin: center;
+      width: 0.625em;
+      border-color: $input-arrow;
+      @include ltr-position(1.125em);
+      z-index: 4;
+    }
+  }
+  &.is-rounded {
+    select {
+      border-radius: $radius-rounded;
+      @include ltr-property("padding", 1em, false);
+    }
+  }
+  select {
+    @include input();
+    cursor: pointer;
+    display: block;
+    font-size: 1em;
+    max-width: 100%;
+    outline: none;
+    &::-ms-expand {
+      display: none;
+    }
+    &[disabled]:hover,
+    fieldset[disabled] &:hover {
+      border-color: #0a0a0a;
+    }
+    &:not([multiple]) {
+      @include ltr-property("padding", 2.5em);
+    }
+    &[multiple] {
+      height: auto;
+      padding: 0;
+      option {
+        padding: 0.5em 1em;
+      }
+    }
   }
 }

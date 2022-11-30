@@ -11,7 +11,7 @@ $alert-padding-ltr: 1.25rem 2.5rem 1.25rem 1.5rem !default;
 $alert-padding-rtl: 1.25rem 1.5rem 1.25rem 2.5rem !default;
 $alert-colors: var.$colors !default;
 
-.alert {
+.inv-alert {
   &:not(:last-child) {
     margin-bottom: 1.5rem;
   }
