@@ -297,11 +297,6 @@ table th:not([align]) {
   min-height: -moz-min-content;
   min-height: min-content;
 }
-.grid.grid-container {
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
-  margin-top: -0.75rem;
-}
 .grid.grid-container:last-child {
   margin-bottom: -0.75rem;
 }
