@@ -115,6 +115,12 @@ body {
   text-align: center;
 }
 
+@media only screen and (max-width: 600px) and (min-width: 400px) {
+  .inv-location-wrapper {
+    padding: 4rem 2rem;
+  }
+}
+
 .inv-location-wrapper .inv-card {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -204,6 +210,7 @@ body {
   line-height: 40px;
   text-align: center;
   color: #484848;
+  margin-top: 3rem;
 }
 
 .banner-ayat .footer-subtitle {
@@ -212,12 +219,13 @@ body {
   font-weight: 400;
   font-size: 50px;
   line-height: 63px;
+  margin-bottom: 3rem;
   margin-top: 0.75rem;
   color: #be8862;
 }
 
 .banner-ayat-footer {
-  height: 30vh !important;
+  height: 45vh !important;
 }
 
 .counter-grid {
