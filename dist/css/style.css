@@ -1498,16 +1498,16 @@ table th:not([align]) {
   resize: none;
 }
 
-.select {
+.inv-select {
   display: inline-block;
   max-width: 100%;
   position: relative;
   vertical-align: top;
 }
-.select:not(.is-multiple) {
+.inv-select:not(.is-multiple) {
   height: 2.5em;
 }
-.select:not(.is-multiple):not(.state-loading)::after {
+.inv-select:not(.is-multiple):not(.state-loading)::after {
   border: 3px solid transparent;
   border-radius: 2px;
   border-right: 0;
@@ -1526,11 +1526,11 @@ table th:not([align]) {
   right: 1.125em;
   z-index: 4;
 }
-.select.is-rounded select {
+.inv-select.is-rounded select {
   border-radius: 9999px;
   padding-left: 1em;
 }
-.select select {
+.inv-select select {
   -moz-appearance: none;
   -webkit-appearance: none;
   align-items: center;
@@ -1559,45 +1559,45 @@ table th:not([align]) {
   max-width: 100%;
   outline: none;
 }
-.select select:focus, .select select.is-focused, .select select:active, .select select.is-active {
+.inv-select select:focus, .inv-select select.is-focused, .inv-select select:active, .inv-select select.is-active {
   outline: none;
 }
-.select select[disabled], fieldset[disabled] .select select {
+.inv-select select[disabled], fieldset[disabled] .inv-select select {
   cursor: not-allowed;
 }
-.select select + placeholder {
+.inv-select select + placeholder {
   color: rgba(54, 54, 54, 0.3);
 }
-.select select:hover, .select select.state-hovered {
+.inv-select select:hover, .inv-select select.state-hovered {
   border-color: #b5b5b5;
 }
-.select select:focus, .select select.state-focused, .select select:active, .select select.state-active {
+.inv-select select:focus, .inv-select select.state-focused, .inv-select select:active, .inv-select select.state-active {
   border-color: #485fc7;
   box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);
 }
-.select select[disabled], fieldset[disabled] .select select {
+.inv-select select[disabled], fieldset[disabled] .inv-select select {
   background-color: #ffffff;
   border-color: #ffffff;
   box-shadow: none;
   color: #7a7a7a;
 }
-.select select[disabled] + placeholder, fieldset[disabled] .select select + placeholder {
+.inv-select select[disabled] + placeholder, fieldset[disabled] .inv-select select + placeholder {
   color: rgba(122, 122, 122, 0.3);
 }
-.select select::-ms-expand {
+.inv-select select::-ms-expand {
   display: none;
 }
-.select select[disabled]:hover, fieldset[disabled] .select select:hover {
+.inv-select select[disabled]:hover, fieldset[disabled] .inv-select select:hover {
   border-color: #0a0a0a;
 }
-.select select:not([multiple]) {
+.inv-select select:not([multiple]) {
   padding-right: 2.5em;
 }
-.select select[multiple] {
+.inv-select select[multiple] {
   height: auto;
   padding: 0;
 }
-.select select[multiple] option {
+.inv-select select[multiple] option {
   padding: 0.5em 1em;
 }
 
