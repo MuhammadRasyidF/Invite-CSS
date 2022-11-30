@@ -6,6 +6,7 @@ $tile-spacing: 0.75rem !default;
 
 .grid{
     align-items: stretch;
+    justify-content: center;
     display: block;
     flex-basis: 0;
     flex-grow: 1;

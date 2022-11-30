@@ -14,7 +14,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <script src="../dist/js/countdown.js"></script>
     <title>Invite CSS</title>
   </head>
   <body>
@@ -77,44 +77,69 @@
       <div class="column-6">
         <span class="wrapper-title"> ~ Menghitung Hari ~ </span>
       </div>
-      <div class="column-6 counter-grid">
-        <div class="grid grid-container">
-          <div class="grid grid-parent countdown-container">
-            <div class="grid-node countdown-box" id="cntd-d-1">
-              <div class="countdown-digit" id="cntd-d-1-now">0</div>
+      <div class="counter-grid">
+        <div class="grid grid-flex grid-container">
+          <div class="grid grid-parent grid-vertical">
+            <div class="grid">
+              <div class="grid grid-flex grid-parent countdown-container">
+                <div class="grid-node countdown-box" id="cntd-d-1">
+                  <div class="countdown-digit" id="cntd-d-1-now">0</div>
+                </div>
+                <div class="grid-node countdown-box" id="cntd-d-2">
+                  <div class="countdown-digit" id="cntd-d-2-now">0</div>
+                </div>
+                <div class="grid-node countdown-box" id="cntd-d-3">
+                  <div class="countdown-digit" id="cntd-d-3-now">0</div>
+                </div>
+              </div>
             </div>
-            <div class="grid-node countdown-box" id="cntd-d-2">
-              <div class="countdown-digit" id="cntd-d-2-now">0</div>
+            <div class="grid grid-flex grid-parent countdown-text">
+              Hari
             </div>
-            <div class="grid-node countdown-box" id="cntd-d-3">
-              <div class="countdown-digit" id="cntd-d-3-now">0</div>
+          </div>
+          <div class="grid grid-parent grid-vertical">
+            <div class="grid">
+              <div class="grid grid-flex grid-parent countdown-container">
+                <div class="grid-node countdown-box" id="cntd-h-1">
+                  <div class="countdown-digit" id="cntd-h-1-now">0</div>
+                </div>
+                <div class="grid-node countdown-box" id="cntd-h-2">
+                  <div class="countdown-digit" id="cntd-h-2-now">0</div>
+                </div>
+              </div>
             </div>
-            <div class="grid-node countdown-box">
-              <div class="countdown-digit">:</div>
+            <div class="grid grid-flex grid-parent countdown-text">
+              Jam
             </div>
-            <div class="grid-node countdown-box" id="cntd-h-1">
-              <div class="countdown-digit" id="cntd-h-1-now">0</div>
+          </div>
+          <div class="grid grid-parent grid-vertical">
+            <div class="grid">
+              <div class="grid grid-flex grid-parent countdown-container">
+                <div class="grid-node countdown-box" id="cntd-m-1">
+                  <div class="countdown-digit" id="cntd-m-1-now">0</div>
+                </div>
+                <div class="grid-node countdown-box" id="cntd-m-2">
+                  <div class="countdown-digit" id="cntd-m-2-now">0</div>
+                </div>
+              </div>
             </div>
-            <div class="grid-node countdown-box" id="cntd-h-2">
-              <div class="countdown-digit" id="cntd-h-2-now">0</div>
+            <div class="grid grid-flex grid-parent countdown-text">
+              Menit
             </div>
-            <div class="grid-node countdown-box">
-              <div class="countdown-digit">:</div>
+          </div>
+          <div class="grid grid-parent grid-vertical">
+            <div class="grid">
+              <div class="grid grid-flex grid-parent countdown-container">
+                <div class="grid-node countdown-box" id="cntd-s-1">
+                  <div class="countdown-digit" id="cntd-s-1-now">0</div>
+                </div>
+                <div class="grid-node countdown-box" id="cntd-s-2">
+                  <div class="countdown-digit" id="cntd-s-2-now">0</div>
+                </div>
+              </div>
             </div>
-            <div class="grid-node countdown-box" id="cntd-m-1">
-              <div class="countdown-digit" id="cntd-m-1-now">0</div>
-            </div>
-            <div class="grid-node countdown-box" id="cntd-m-2">
-              <div class="countdown-digit" id="cntd-m-2-now">0</div>
-            </div>
-            <div class="grid-node countdown-box">
-              <div class="countdown-digit">:</div>
-            </div>
-            <div class="grid-node countdown-box" id="cntd-s-1">
-              <div class="countdown-digit" id="cntd-s-1-now">0</div>
-            </div>
-            <div class="grid-node countdown-box" id="cntd-s-2">
-              <div class="countdown-digit" id="cntd-s-2-now">0</div>
+            <div class="grid grid-flex grid-parent countdown-text">
+              Detik
             </div>
           </div>
         </div>
@@ -212,5 +237,5 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   ></script>
-  <script src="../dist/js/countdown.js"></script>
+  <script src="../dist/js/script.js"></script>
 </html>
