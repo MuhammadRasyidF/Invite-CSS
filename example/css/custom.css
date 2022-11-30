@@ -154,6 +154,28 @@ body {
   margin-top: 5.5rem;
 }
 
+.counter-grid {
+  flex: auto;
+}
+
+.countdown-container {
+  font-family: "Imprima";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3em;
+  color: #be8862;
+} 
+.countdown-text {
+  padding-top: 0 !important;
+  font-family: "Imprima";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #484848;
+}
+
 .gallery-grid {
   padding: 4rem 6rem;
 }
