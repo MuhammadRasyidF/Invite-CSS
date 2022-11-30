@@ -115,11 +115,6 @@ body {
   text-align: center;
 }
 
-@media only screen and (max-width: 600px) and (min-width: 400px) {
-  .inv-location-wrapper {
-    padding: 4rem 2rem;
-  }
-}
 
 .inv-location-wrapper .inv-card {
   padding-top: 2rem;
@@ -202,7 +197,7 @@ body {
   margin-top: 1.5rem;
 }
 
-.banner-ayat .footer-title {
+.footer-title {
   font-family: "Imprima";
   font-style: normal;
   font-weight: 400;
@@ -213,7 +208,7 @@ body {
   margin-top: 3rem;
 }
 
-.banner-ayat .footer-subtitle {
+.footer-subtitle {
   font-family: "Great Vibes";
   font-style: normal;
   font-weight: 400;
@@ -236,4 +231,30 @@ body {
 .inv-image.is-256x256 {
   width: 20vw;
   height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .inv-location-wrapper {
+    padding: 2rem 2rem;
+  }
+  .inv-precard,
+  .wrapper-title {
+    font-size: 35px;
+  }
+  .footer-title {
+    font-size: 16px;
+    line-height: 25px;
+    padding: 1.3rem;
+  }
+  .footer-subtitle {
+    font-size: 40px;
+  }
+  .banner-ayat .title {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 1.3rem;
+  }
+  .banner-ayat {
+    height: 0;
+  }
 }
