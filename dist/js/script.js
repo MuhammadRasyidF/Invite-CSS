@@ -6,3 +6,19 @@ setInterval(function() {
     cnt.draw();
   
 }, 1000);
+
+// Animation Usage
+var anim1 = new ScrollAnimation('.reveal', {
+    'position': 'relative',
+    'transform': 'translateY(150px)',
+    'opacity': '0',
+    'transition': '1s all ease'
+}, {
+    'transform': 'translateY(0)',
+    'opacity': '1',
+}, 150, false)
+
+
+window.addEventListener("scroll", () => {
+    anim1.animate();
+});
