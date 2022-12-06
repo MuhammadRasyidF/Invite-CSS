@@ -378,4 +378,5 @@ body {
 
 .modal-content .inv-image img {
   width: auto;
+  max-width: 60vw;
 }
