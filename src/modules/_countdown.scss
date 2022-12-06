@@ -14,13 +14,13 @@
   position: relative;
 }
 
-@keyframes fadeInAndOut {
+@keyframes fadeIn {
   0% {opacity: 0;}
-  20% {opacity: 1;}
-  60% {opacity: 1;}
-  80% {opacity: 0.9;}
-  100% {opacity: 0;}
+  20% {opacity: 0.4;}
+  60% {opacity: 0.8;}
+  80% {opacity: 0.95;}
+  100% {opacity: 1;}
 }
 .countdown-animate {
-    animation: fadeInAndOut 1s linear;
+    animation: fadeIn 1s linear;
 }
