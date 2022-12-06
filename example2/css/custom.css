@@ -164,6 +164,12 @@ html, body {
     padding: 8rem 12rem;
     text-align: center;
     background:#f0f0f0;
+    color: white;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("https://wallpaperaccess.com/full/2677518.jpg");
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -194,11 +200,26 @@ html, body {
 }
 
 .location-subtitler {
-    font-size: 14px;
-    font-family: Raleway;
+    font-size: 16px;
     font-weight: 400;
     line-height: 27px;
     margin-top: 1.5rem;
+}
+
+.location-subtitler .wide-p {
+    font-weight: 700;
+    width: fit-content;
+    padding-bottom: .5rem;
+}
+.location-subtitler .wide-p:hover {
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+
+.location-subtitler .wide-p .time {
+    font-size: 30px;
+    font-family: "Nunito Sans";
+
 }
 
 .location-info {
@@ -238,7 +259,7 @@ html, body {
 }
 
 .thank-wrapper {
-    padding: 6rem 12rem;
+    padding: 8rem 12rem;
     font-size: 14px;
     text-align: center;
     font-family: Raleway;
@@ -249,7 +270,7 @@ html, body {
 .thank-name {
     font-family: "Great Vibes";
     font-size: 52px;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .footer-wrapper {
