@@ -9,7 +9,9 @@ $(document).ready(()=> {
     }, 1000);
     
     $('#reservation-btn').click(() => {
-        alert("RSVP");
+        $('html, body').animate({
+            scrollTop: $('.location-wrapper').offset().top
+        }, 'slow')
     })
 })
 

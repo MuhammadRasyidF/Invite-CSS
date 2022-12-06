@@ -150,6 +150,14 @@ body {
   padding: 3rem 10rem;
 }
 
+.grid.grid-node .inv-image {
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+}
+.grid.grid-node .inv-image:hover {
+    opacity: 0.75;
+}
+
 .grid-gallery {
   margin-top: 2rem;
   margin-bottom: 2rem;
