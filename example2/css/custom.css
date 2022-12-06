@@ -363,6 +363,13 @@ html, body {
     .location-titler {
         margin-top: 2rem;
     }
+    .location-subtitler .wide-p {
+        text-align: center;
+        width: 100%;
+    }
+    .location-subtitler .wide-p:hover {
+        border: none;
+    }
     .column-2.footer-data {
         width: 100%;
     }
