@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes");
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@0,300;0,400;0,700");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+html, body {
+    background-color: white;
+    font-family: "Poppins";
+}
+
+.banner-first {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://media.tenor.com/Q5J4v3mEz-UAAAAd/spy-x-family-proposal.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.banner-first .title {
+    font-family: "Great Vibes", sans-serif;
+    white-space: nowrap;
+    font-size: 100px;
+    line-height: 112px;
+    font-weight: 400;
+}
+
+.banner-first .subtitle {
+    margin-top: 2.5rem;
+}
+
+.grid-wrapper {
+    margin-top: 1.5rem;
+    padding-left: 25rem;
+    padding-right: 25rem;
+    color: white;
+    font-family: "Nunito Sans";
+    font-weight: 700;
+    font-size: 54px;
+}
+.countdown-text {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.reservation-btn {
+    height: 50px;
+    width: 110px;
+    font-size: 16px;
+    margin-top: 4rem;
+    font-weight: 400;
+    font-family: "Poppins";
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    border: 3px solid white;
+    transition: all 0.25s ease-in-out;
+}
+.reservation-btn:hover {
+    background-color: white;
+    color: #303d4c;
+}
+
+.wrapper-title {
+    font-size: 30px;
+    line-height: 1.35em;
+    font-weight: 300;
+    color: #333;
+}
+
+.wrapper-content {
+    margin-top: 1.5rem;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Raleway;
+}
+
+.story-wrapper {
+    text-align: center;
+    padding: 5rem 14rem;
+    line-height: 27px;
+    color: #949494;
+}
+
+.quotes {
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+.bride-wrapper {
+    padding: 2.5rem 5rem;
+}
+
+.bride-wrapper .row div {
+    text-align: center;
+    background-color: #eaf1f4;
+    padding: 3rem 1.5rem;
+}
+
+.bride-name {
+    display: block;
+    margin-top: 2rem;
+}
+
+.bride-social {
+    margin-top: 1rem;
+}
+.bride-social i:not(:last-of-type) {
+    margin-right: .5rem;
+}
+
+.inv-image img {
+    width: 20vw;
+}
+
+.gallery-wrapper {
+    text-align: center;
+    padding: 3rem 10rem;
+}
+
+.grid.grid-parent {
+    padding-bottom: 0;
+}
+
+.location-wrapper {
+    padding: 3rem 10rem;
+    text-align: center;
+    background-color: #eaf1f4;
+}
+
+.location-title {
+    font-family: Raleway,sans-serif;
+    color: #4a3e5a;
+    line-height: 62px;
+    font-size: 33px;
+    font-weight: 400;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.form-wrapper {
+    padding: 5rem 30rem;
+}
+
+.form-wrapper .inv-card .card-content {
+    text-align: center;
+    font-size: 22px;
+}
+
+.form-title {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.form-input {
+    padding: 0 1.5rem;
+}
+
+.footer-wrapper {
+    padding: 2rem 12rem;
+}
+
+.footer-wrapper .row div {
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer-copy {
+    margin-top: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-wrapper {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .story-wrapper {
+        padding: 2.5rem 2rem;
+    }
+    .column-3 {
+        width: 100%;
+    }
+    .gallery-wrapper {
+        padding: 2rem 2rem;
+    }
+    .grid.grid-parent {
+        padding-bottom: 0;
+    }
+}
