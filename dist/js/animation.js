@@ -1,17 +1,47 @@
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
+class ScrollAnimation {
+  pxOffset = 0;
+  repeat = false;
+  isActive = false;
+  name;
+  style = {};
+  activeStyle = {};
 
-  for (var i = 0; i < reveals.length; i++) {
+  constructor(name, style = {}, activeStyle = {}, offset = 0, repeat = false) {
+    this.name = name;
+    this.pxOffset = offset;
+    this.style = style;
+    this.activeStyle = activeStyle;
+    this.repeat = repeat;
+
+    var objectList = document.querySelectorAll(this.name);
+    for (let obj of objectList) {
+      for(const key in this.style) {
+        obj.style[key] = this.style[key];
+      }
+    }
+  }
+
+  animate() {
+    var objectList = document.querySelectorAll(this.name);
     var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
+    for (let obj of objectList) {
+      var elementTop = obj.getBoundingClientRect().top;
+  
+      if (elementTop < windowHeight - this.pxOffset) {
+        if(!this.isActive) {
+          this.isActive = true;
+          for(const key in this.activeStyle) {
+            obj.style[key] = this.activeStyle[key];
+          }
+        }
+      } else {
+        if(this.isActive && this.repeat) {
+          this.isActive = false;
+          for(const key in this.activeStyle) {
+            obj.style[key] = this.style[key];
+          }
+        }
+      }
     }
   }
 }
-
-window.addEventListener("scroll", reveal);
