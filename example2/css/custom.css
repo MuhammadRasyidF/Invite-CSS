@@ -64,10 +64,11 @@ html, body {
     line-height: 1.35em;
     font-weight: 300;
     color: #333;
+    text-align: center;
 }
 
 .wrapper-content {
-    margin-top: 1.5rem;
+    margin-top: 1.75rem;
     font-size: 14px;
     font-weight: 400;
     font-family: Raleway;
@@ -85,30 +86,70 @@ html, body {
     margin-top: 1rem;
 }
 
-.bride-wrapper {
-    padding: 2.5rem 5rem;
+.gap-wrapper {
+    text-align: center;
+    padding: 10rem 10rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("https://pic-bstarstatic.akamaized.net/ugc/adb89849a5d93c8904e15eaa5dfd8720.jpeg");
+    color: white;
+    font-size: 30px;
 }
 
-.bride-wrapper .row div {
-    text-align: center;
-    background-color: #eaf1f4;
-    padding: 3rem 1.5rem;
+.gap-location {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: .5px;
+}
+
+.bride-wrapper {
+    padding: 5rem 14rem;
 }
 
 .bride-name {
     display: block;
-    margin-top: 2rem;
+    font-size: 40px;
+    font-family: "Great Vibes";
 }
 
 .bride-social {
     margin-top: 1rem;
 }
+.bride-social i {
+    cursor: pointer;
+    font-size: 22px;
+}
 .bride-social i:not(:last-of-type) {
     margin-right: .5rem;
 }
 
+.bride-profile {
+    padding-left: 5rem!important;
+}
+
+.bride-photo {
+    padding-left: 4rem;
+}
+
+.bride-description {
+    margin-top: .5rem;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Raleway;
+    line-height: 27px;
+    color: #949494;
+}
+
+.bride-box {
+    margin-top: 1rem;
+}
+
 .inv-image img {
-    width: 20vw;
+    width: 10vw;
 }
 
 .gallery-wrapper {
@@ -172,8 +213,27 @@ html, body {
         padding-left: 5rem;
         padding-right: 5rem;
     }
+    .gap-wrapper {
+        padding: 4rem 2rem;
+    }
+    .bride-wrapper,
     .story-wrapper {
         padding: 2.5rem 2rem;
+    }
+    
+    .inv-image img {
+        width: 25vw;
+    }
+    .bride-photo {
+        padding-left: 0;
+    }
+    
+    .bride-wrapper .row div,
+    .bride-profile {
+        padding: 0;
+    }
+    .bride-profile {
+        padding-left: 2rem!important;
     }
     .column-3 {
         width: 100%;
