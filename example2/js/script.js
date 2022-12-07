@@ -35,8 +35,8 @@ var anim2 = new ScrollAnimation('.inv-reveal-rand', {
     'transform': 'translateY(0)',
     'opacity': '1',
 }, () => {
-    return 100 + Math.floor(Math.random() * 75);
-}, true)
+    return 100 + Math.floor(Math.random() * 150);
+}, false)
 
 var anim3 = new ScrollAnimation('.inv-spin', {
     'position': 'relative',
@@ -48,8 +48,29 @@ var anim3 = new ScrollAnimation('.inv-spin', {
     'opacity': '1',
 }, 150, true)
 
+var anim4 = new ScrollAnimation('.inv-scale', {
+    'position': 'relative',
+    'transform': 'scale(0, 0)',
+    'opacity': '0',
+    'transition': '1s all ease'
+}, {
+    'transform': 'scale(1, 1)',
+    'opacity': '1',
+}, 150, true)
+
+var anim5 = new ScrollAnimation('.inv-opacity', {
+    'position': 'relative',
+    'opacity': '0',
+    'transition': '1.5s all ease'
+}, {
+    
+    'opacity': '1',
+}, 200, true)
+
 window.addEventListener("scroll", () => {
     anim1.animate();
     anim2.animate();
     anim3.animate();
+    anim4.animate();
+    anim5.animate();
 });
