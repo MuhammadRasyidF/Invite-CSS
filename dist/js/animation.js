@@ -1,7 +1,7 @@
 class ScrollAnimation {
   pxOffset = 0;
   repeat = false;
-  isActive = false;
+  isActive = [];
   name;
   style = {};
   activeStyle = {};
@@ -14,9 +14,10 @@ class ScrollAnimation {
     this.repeat = repeat;
 
     var objectList = document.querySelectorAll(this.name);
-    for (let obj of objectList) {
+    for(let i = 0; i < objectList.length; i++) {
+      this.isActive.push(false);
       for(const key in this.style) {
-        obj.style[key] = this.style[key];
+        objectList[i].style[key] = this.style[key];
       }
     }
   }
@@ -24,21 +25,20 @@ class ScrollAnimation {
   animate() {
     var objectList = document.querySelectorAll(this.name);
     var windowHeight = window.innerHeight;
-    for (let obj of objectList) {
-      var elementTop = obj.getBoundingClientRect().top;
-  
-      if (elementTop < windowHeight - this.pxOffset) {
-        if(!this.isActive) {
-          this.isActive = true;
+    for(let i = 0; i < objectList.length; i++) {
+      var elementTop = objectList[i].getBoundingClientRect().top;
+      if (elementTop < windowHeight - ((typeof(this.pxOffset) === 'function') ? this.pxOffset(): this.pxOffset)) {
+        if(!this.isActive[i]) {
+          this.isActive[i] = true;
           for(const key in this.activeStyle) {
-            obj.style[key] = this.activeStyle[key];
+            objectList[i].style[key] = this.activeStyle[key];
           }
         }
       } else {
-        if(this.isActive && this.repeat) {
-          this.isActive = false;
+        if(this.isActive[i] && this.repeat) {
+          this.isActive[i] = false;
           for(const key in this.activeStyle) {
-            obj.style[key] = this.style[key];
+            objectList[i].style[key] = this.style[key];
           }
         }
       }

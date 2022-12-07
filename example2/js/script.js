@@ -16,7 +16,7 @@ $(document).ready(()=> {
 })
 
 // Animation Usage
-var anim1 = new ScrollAnimation('.reveal', {
+var anim1 = new ScrollAnimation('.inv-reveal', {
     'position': 'relative',
     'transform': 'translateY(150px)',
     'opacity': '0',
@@ -26,6 +26,30 @@ var anim1 = new ScrollAnimation('.reveal', {
     'opacity': '1',
 }, 150, true)
 
+var anim2 = new ScrollAnimation('.inv-reveal-rand', {
+    'position': 'relative',
+    'transform': 'translateY(150px)',
+    'opacity': '0',
+    'transition': '1s all ease'
+}, {
+    'transform': 'translateY(0)',
+    'opacity': '1',
+}, () => {
+    return 100 + Math.floor(Math.random() * 75);
+}, true)
+
+var anim3 = new ScrollAnimation('.inv-spin', {
+    'position': 'relative',
+    'transform': 'rotate(360deg)',
+    'opacity': '0',
+    'transition': '1s all ease'
+}, {
+    'transform': 'rotate(0)',
+    'opacity': '1',
+}, 150, true)
+
 window.addEventListener("scroll", () => {
     anim1.animate();
+    anim2.animate();
+    anim3.animate();
 });
