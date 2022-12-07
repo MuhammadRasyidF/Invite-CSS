@@ -63,7 +63,6 @@ var anim5 = new ScrollAnimation('.inv-opacity', {
     'opacity': '0',
     'transition': '1.5s all ease'
 }, {
-    
     'opacity': '1',
 }, 200, true)
 
