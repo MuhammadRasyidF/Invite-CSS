@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes");
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@0,300;0,400;0,700");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
 html,
 body,
 p,
@@ -238,6 +242,7 @@ table th:not([align]) {
   background-color: #edecf1;
 }
 .banner .title {
+  font-family: "Great Vibes", sans-serif;
   color: white;
   font-size: 2rem;
 }

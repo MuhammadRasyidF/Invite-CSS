@@ -1,24 +1,28 @@
 // Usage to 31 December 2022, 23:59:59
-var cnt = new Countdown("cntd", new Date("2022-12-31 23:59:59 GMT+0700")); 
+var cnt = new Countdown("cntd", new Date("2022-12-31 23:59:59 GMT+0700"));
 
-setInterval(function() {
-    cnt.tick();
-    cnt.draw();
-  
+setInterval(function () {
+  cnt.tick();
+  cnt.draw();
 }, 1000);
 
 // Animation Usage
-var anim1 = new ScrollAnimation('.reveal', {
-    'position': 'relative',
-    'transform': 'translateY(150px)',
-    'opacity': '0',
-    'transition': '1s all ease'
-}, {
-    'transform': 'translateY(0)',
-    'opacity': '1',
-}, 150, false)
-
+var anim1 = new ScrollAnimation(
+  ".reveal",
+  {
+    position: "relative",
+    transform: "translateY(150px)",
+    opacity: "0",
+    transition: "1s all ease",
+  },
+  {
+    transform: "translateY(0)",
+    opacity: "1",
+  },
+  150,
+  false
+);
 
 window.addEventListener("scroll", () => {
-    anim1.animate();
+  anim1.animate();
 });
