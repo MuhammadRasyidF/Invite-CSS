@@ -1,0 +1,179 @@
+.video-container {
+    max-width: 100%;
+    background-color: black;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.video-container .wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -15vh;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.08s ease;
+}
+
+.video-container.show-controls .wrapper {
+    bottom: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.13s ease;
+}
+
+.video-timeline {
+    cursor: pointer;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.video-timeline .progress-area {
+    height: .25rem;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.progress-area span {
+    position: absolute;
+    left: 50%;
+    color: #fff;
+    top: -2rem;
+    font-size: 14px;
+    transform: translateX(-50%);
+}
+
+.progress-area .progress-bar {
+    width: 0%;
+    height: 100%;
+    position: relative;
+    background: #2289ff;
+}
+
+.progress-area span, .progress-area .progress-bar::before {
+    display: none;
+}
+
+.video-timeline:hover .progress-area span,
+.video-timeline:hover .progress-area .progress-bar::before {
+    display: block;
+}
+
+.progress-area .progress-bar::before {
+    content: "";
+    right: 0;
+    top: 50%;
+    height: 14px;
+    width: 14px;
+    background: inherit;
+    position: absolute;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.video-container .wrapper::before {
+    content: "";
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    background-color: black;
+    height: calc(100% + 2rem);
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.video-container > video {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.container video {
+    width: 100%;
+}
+
+.video-controls {
+    padding: .25rem 4rem 1.5rem;
+}
+
+.video-controls .options {
+    width: 100%;
+}
+
+.video-controls .options:first-child {
+    justify-content: flex-start;
+}
+
+.video-controls .options:last-child {
+    justify-content: flex-end;
+}
+
+.options button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    color: #fff;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.options button :where(i, span) {
+    width: 100%;
+    height: 100%;
+    line-height: 2.2485rem;
+}
+
+.options button:hover {
+    cursor: pointer;
+}
+
+.options .video-timer {
+    font-size: 14px;
+    color: #efefef;
+    margin-left: 1rem;
+    /* font-family: ; */
+}
+
+.video-controls, .video-timer, .options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playback-content {
+    position: relative;
+}
+
+.playback-content .speed-options {
+    position: absolute;
+    background: #fff;
+    left: -2.5rem;
+    bottom: 3rem;
+    border-radius: 3px;
+    opacity: 0;
+    pointer-events: none;
+    width: 8vw;
+    transition: opacity 0.13s ease;
+}
+
+.playback-content .speed-options.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.speed-options li {
+    font-size: 14px;
+    padding: .4rem 0rem .4rem .75rem;
+    cursor: pointer;
+}
+
+.speed-options li.active {
+    background-color: #2289ff;
+    color: #fff;
+}
+
+.inv-video {
+    display: block;
+}

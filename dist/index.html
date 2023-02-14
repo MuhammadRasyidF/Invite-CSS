@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/video.css" />
+    <link rel="stylesheet" href="video.css" />
     <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
@@ -528,7 +528,7 @@
       padding-left: 5rem;
       padding-right: 5rem"
     >
-    <div class="video-container">
+    <div class="video-container show-controls">
       <div class="wrapper">
         <div class="video-timeline">
           <div class="progress-area">
@@ -539,7 +539,7 @@
         <ul class="video-controls">
           <li class="options left">
             <button class="volume"><i class="fa-solid fa-volume-high"></i></button>
-            <input type="range">
+            <input type="range" class="volume-slider" min="0" max="1" value="1" step="0.1">
             <div class="video-timer">
               <p class="time-current">00:00</p>
               <p class="separator"> / </p>
@@ -557,11 +557,11 @@
                 <span class="material-symbols-outlined">slow_motion_video</span>
               </button>
               <ul class="speed-options">
-                <li>2x</li>
-                <li>1.5x</li>
-                <li class="active">1x</li>
-                <li>0.75x</li>
-                <li>0.5x</li>
+                <li data-speed="2">2x</li>
+                <li data-speed="1.5">1.5x</li>
+                <li data-speed="1" class="active">1x</li>
+                <li data-speed="0.75">0.75x</li>
+                <li data-speed="0.5">0.5x</li>
               </ul>
             </div>
             <button class="pic-in-pic">
@@ -573,14 +573,14 @@
           </li>
         </ul>
       </div>
-      <video src="media/video.mp4" id="inv-video"></video>
+      <video src="media/video_1.mp4" id="inv-video" class="inv-video"></video>
     </div>
 
     </div>
 
     <footer class="footer">© The State of Queensland 1995–2022</footer>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
     <script src="js/animation.js"></script>
     <script src="js/video.js"></script>
   </body>
