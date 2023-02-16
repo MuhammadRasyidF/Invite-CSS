@@ -528,7 +528,7 @@
       padding-left: 5rem;
       padding-right: 5rem"
     >
-    <div class="video-container show-controls">
+    <div class="video-container show-controls" id="video_1">
       <div class="wrapper">
         <div class="video-timeline">
           <div class="progress-area">
@@ -567,7 +567,7 @@
           </li>
         </ul>
       </div>
-      <video src="media/video_1.mp4" id="inv-video" class="inv-video"></video>
+      <video src="media/video_1.mp4" class="inv-video"></video>
     </div>
 
     </div>
@@ -577,5 +577,8 @@
     <!-- <script src="js/script.js"></script> -->
     <script src="js/animation.js"></script>
     <script src="js/video.js"></script>
+    <script>
+      const video_1 = new VideoContainer('#video_1')
+    </script>
   </body>
 </html>
