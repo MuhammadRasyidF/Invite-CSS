@@ -24,17 +24,17 @@ class VideoContainer {
     
     constructor (obj) {
         this.handleObject(obj)
-        this.handleTimeProgress('.progress-bar')
+        this.handleTimeProgress('.inv-progress-bar')
         this.HandleTimeText('.time-current', '.time-end')
         this.handleVideo('.inv-video')
-        this.handleTimeLine('.video-timeline')
-        this.handlePlay('.play-pause')
-        this.handleSeek('.skip-backward', '.skip-forward')
+        this.handleTimeLine('.inv-timeline')
+        this.handlePlay('.inv-vctr-play-pause')
+        this.handleSeek('.inv-vctr-seek-back', '.inv-vctr-seek-forward')
         this.handleVolume('.volume')
-        this.handleVolumeSlider('.volume-slider')
-        this.handleSpeed('.playback-speed', '.speed-options')
-        this.handlePicInPic('.pic-in-pic')
-        this.handleFullscreen('.fullscreen')
+        this.handleVolumeSlider('.inv-vctr-volume')
+        this.handleSpeed('.inv-vctr-playback', '.speed-options')
+        this.handlePicInPic('.inv-vctr-pip')
+        this.handleFullscreen('.inv-vctr-fullscreen')
         this.hideControls()
     }
 
