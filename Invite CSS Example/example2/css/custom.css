@@ -8,7 +8,6 @@
 html,
 body {
   background-color: white;
-  font-family: "Poppins";
 }
 
 .banner-first {
@@ -18,10 +17,9 @@ body {
   background-size: cover;
   text-align: center;
 }
+
 .banner-first .title {
-  /*font-family: "Great Vibes", sans-serif;*/
   white-space: nowrap;
-  font-size: 100px;
   line-height: 112px;
   font-weight: 400;
 }
@@ -35,7 +33,6 @@ body {
   padding-left: 25rem;
   padding-right: 25rem;
   color: white;
-  font-family: "Nunito Sans";
   font-weight: 700;
   font-size: 54px;
 }
@@ -45,18 +42,21 @@ body {
 }
 
 .reservation-btn {
-  height: 50px;
-  width: 110px;
+  padding: 1rem 1.5rem 1rem 1.5rem;
   font-size: 16px;
   margin-top: 4rem;
   font-weight: 400;
-  font-family: "Poppins";
   cursor: pointer;
   color: white;
   background-color: transparent;
   border: 3px solid white;
   transition: all 0.25s ease-in-out;
 }
+
+.open-env-btn {
+  padding: 1rem;
+}
+
 .reservation-btn:hover {
   background-color: white;
   color: #303d4c;
@@ -74,7 +74,6 @@ body {
   margin-top: 1.75rem;
   font-size: 14px;
   font-weight: 400;
-  font-family: Raleway;
 }
 
 .story-wrapper {
@@ -202,7 +201,6 @@ body {
 
 .location-titler {
   font-size: 30px;
-  font-family: "Poppins";
   font-weight: 400;
 }
 
@@ -306,7 +304,6 @@ body {
 .invite-footer {
   background-color: #20262c;
   margin-top: 0;
-  font-family: "Poppins";
   font-weight: 300;
   font-size: 14px;
   padding: 1.5rem 2rem;
@@ -323,12 +320,11 @@ body {
 
 .inv-input {
   font-size: 14px;
-  font-family: "Poppins";
+
   padding: 1.5rem 1rem;
 }
 
 .inv-select select {
-  font-family: "Poppins";
   color: #575c62;
   font-size: 14px;
   padding-right: 1rem;
@@ -338,7 +334,6 @@ body {
 
 .inv-textarea {
   font-size: 14px;
-  font-family: "Poppins";
   padding-top: 1rem;
   padding-right: 1rem;
   padding-left: 1rem;
@@ -412,4 +407,9 @@ body {
 .modal-content .inv-image img {
   width: auto;
   max-width: 60vw;
+}
+
+.inv-envelope {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/gallery-1.png");
 }
