@@ -1,0 +1,61 @@
+.inv-envelope {
+  position: fixed;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+
+  &-groom-name {
+    font-family: "Great Vibes";
+    color: #f0f0f0;
+    font-size: 4rem;
+  }
+
+  &-date-of-event {
+    color: #f0f0f0;
+    font-size: 1rem;
+  }
+
+  &-content-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-attende-wrapper {
+    padding-top: 6rem;
+  }
+
+  &-attende-name {
+    font-weight: bold;
+    color: #f0f0f0;
+    font-size: 1.5rem;
+  }
+
+  &-attende-wrapper {
+    align-items: center;
+    text-align: center;
+  }
+
+  .btn-open-env {
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    font-size: 16px;
+    margin-top: 4rem;
+    font-weight: 400;
+    cursor: pointer;
+    color: white;
+    font-family: "Poppins";
+    background-color: transparent;
+    border: 3px solid white;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .btn-open-env:hover {
+    background-color: white;
+    color: #303d4c;
+  }
+}

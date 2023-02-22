@@ -244,7 +244,7 @@ table th:not([align]) {
 .banner .title {
   font-family: "Great Vibes", sans-serif;
   color: white;
-  font-size: 2rem;
+  font-size: 6rem;
 }
 .banner .subtitle {
   color: whitesmoke;
@@ -637,7 +637,7 @@ table th:not([align]) {
 }
 @media screen and (min-width: 769px) {
   .modal-content,
-.modal-card {
+  .modal-card {
     margin: 0 auto;
     max-height: calc(100vh - 40px);
     width: 640px;
@@ -1246,6 +1246,7 @@ table th:not([align]) {
   box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
   max-width: 100%;
   width: 100%;
+  font-family: Poppins;
 }
 .inv-input:focus, .inv-input.is-focused, .inv-input:active, .inv-input.is-active {
   outline: none;
@@ -1388,6 +1389,7 @@ table th:not([align]) {
   box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
   max-width: 100%;
   width: 100%;
+  font-family: Poppins;
   display: block;
   max-width: 100%;
   min-width: 100%;
@@ -1537,6 +1539,7 @@ table th:not([align]) {
 }
 .inv-select.is-rounded select {
   border-radius: 9999px;
+  font-family: "Poppins";
   padding-left: 1em;
 }
 .inv-select select {
@@ -1567,6 +1570,7 @@ table th:not([align]) {
   font-size: 1em;
   max-width: 100%;
   outline: none;
+  font-family: "Poppins";
 }
 .inv-select select:focus, .inv-select select.is-focused, .inv-select select:active, .inv-select select.is-active {
   outline: none;
@@ -1610,9 +1614,77 @@ table th:not([align]) {
   padding: 0.5em 1em;
 }
 
+.inv-envelope {
+  position: fixed;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.inv-envelope-groom-name {
+  font-family: "Great Vibes";
+  color: #f0f0f0;
+  font-size: 4rem;
+}
+.inv-envelope-date-of-event {
+  color: #f0f0f0;
+  font-size: 1rem;
+}
+.inv-envelope-content-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.inv-envelope-attende-wrapper {
+  padding-top: 6rem;
+}
+.inv-envelope-attende-name {
+  font-weight: bold;
+  color: #f0f0f0;
+  font-size: 1.5rem;
+}
+.inv-envelope-attende-wrapper {
+  align-items: center;
+  text-align: center;
+}
+.inv-envelope .btn-open-env {
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  font-size: 16px;
+  margin-top: 4rem;
+  font-weight: 400;
+  cursor: pointer;
+  color: white;
+  font-family: "Poppins";
+  background-color: transparent;
+  border: 3px solid white;
+  transition: all 0.25s ease-in-out;
+}
+.inv-envelope .btn-open-env:hover {
+  background-color: white;
+  color: #303d4c;
+}
+
 body {
   color: #575c62;
   margin: 0;
+  font-family: "Poppins";
+}
+
+p {
+  font-family: "Raleway";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Great Vibes";
 }
 
 .box {
