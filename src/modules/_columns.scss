@@ -1,15 +1,15 @@
-@use 'variables.scss' as var;
-@import 'utilities/functions';
+@use "variables.scss" as var;
+@import "utilities/functions";
 
-.row {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
+.inv-row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 @for $i from 1 through var.$n-columns {
-    .column-#{$i} {
-       width: (divide($i, 6)) * 100%;
-       flex: none;
-    }
- }
+  .inv-column-#{$i} {
+    width: (divide($i, 6)) * 100%;
+    flex: none;
+  }
+}

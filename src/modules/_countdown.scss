@@ -1,6 +1,6 @@
 // ref: https://jsfiddle.net/th2ap7r6/
 
-.countdown-container {
+.inv-countdown {
   // border: 2px solid black;
   // font-family: Arial, sans-serif;
   // font-size: 12em;
@@ -15,12 +15,23 @@
 }
 
 @keyframes fadeIn {
-  0% {opacity: 0;}
-  20% {opacity: 0.4;}
-  60% {opacity: 0.8;}
-  80% {opacity: 0.95;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 1;
+  }
 }
+
 .countdown-animate {
-    animation: fadeIn 1s linear;
+  animation: fadeIn 1s linear;
 }
