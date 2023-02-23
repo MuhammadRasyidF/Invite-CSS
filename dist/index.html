@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="video.css" />
     <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
@@ -22,6 +23,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
       integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
@@ -516,10 +522,108 @@
     <div style="padding: 20px">
       <button class="inv-button">Button</button>
     </div>
+    </div>
+
+    <div style="
+      padding-left: 5rem;
+      padding-right: 5rem"
+    >
+
+    <div class="row">
+      <div class="column-6" style="padding:.5rem">
+        <div class="inv-video-container show-controls" id="video_1">
+          <div class="wrapper">
+            <div class="inv-timeline">
+              <div class="inv-progress">
+                <span>00:00</span>
+                <div class="inv-progress-bar"></div>
+              </div>
+            </div>
+            <ul class="inv-video-controls">
+              <li class="options left">
+                <button class="volume"><i class="fa-solid fa-volume-high"></i></button>
+                <input type="range" class="inv-vctr-volume" min="0" max="1" value="1" step="0.1">
+                <div class="inv-video-timer">
+                  <p class="time-current">00:00</p>
+                  <p class="separator"> / </p>
+                  <p class="time-end">00:00</p>
+                </div>
+              </li>
+              <li class="options center">
+                <button class="inv-vctr-seek-back"><i class="fas fa-backward"></i></button>
+                <button class="inv-vctr-play-pause"><i class="fas fa-play"></i></button>
+                <button class="inv-vctr-seek-forward"><i class="fas fa-forward"></i></button>
+              </li>
+              <li class="options right">
+                <div class="inv-video-playback">
+                  <button class="inv-vctr-playback"><span class="material-symbols-outlined">slow_motion_video</span></button>
+                  <ul class="speed-options">
+                    <li data-speed="2">2x</li>
+                    <li data-speed="1.5">1.5x</li>
+                    <li data-speed="1" class="active">1x</li>
+                    <li data-speed="0.75">0.75x</li>
+                    <li data-speed="0.5">0.5x</li>
+                  </ul>
+                </div>
+                <button class="inv-vctr-pip"><span class="material-icons">picture_in_picture_alt</span></button>
+                <button class="inv-vctr-fullscreen"><i class="fa-solid fa-expand"></i></button>
+              </li>
+            </ul>
+          </div>
+          <video src="media/video_1.mp4" class="inv-video"></video>
+        </div>
+      </div>
+      <div class="column-6" style="padding:.5rem">
+        <div class="inv-video-container show-controls" id="video_2">
+          <div class="wrapper">
+            <div class="inv-timeline">
+              <div class="inv-progress">
+                <span>00:00</span>
+                <div class="inv-progress-bar"></div>
+              </div>
+            </div>
+            <ul class="inv-video-controls">
+              <li class="options left">
+                <button class="volume"><i class="fa-solid fa-volume-high"></i></button>
+                <input type="range" class="inv-vctr-volume" min="0" max="1" value="1" step="0.1">
+                <div class="inv-video-timer">
+                  <p class="time-current">00:00</p>
+                  <p class="separator"> / </p>
+                  <p class="time-end">00:00</p>
+                </div>
+              </li>
+              <li class="options center">
+                <button class="inv-vctr-seek-back"><i class="fas fa-backward"></i></button>
+                <button class="inv-vctr-play-pause"><i class="fas fa-play"></i></button>
+                <button class="inv-vctr-seek-forward"><i class="fas fa-forward"></i></button>
+              </li>
+              <li class="options right">
+                <div class="inv-video-playback">
+                  <button class="inv-vctr-playback"><span class="material-symbols-outlined">slow_motion_video</span></button>
+                  <ul class="speed-options">
+                    <li data-speed="2">2x</li>
+                    <li data-speed="1.5">1.5x</li>
+                    <li data-speed="1" class="active">1x</li>
+                    <li data-speed="0.75">0.75x</li>
+                    <li data-speed="0.5">0.5x</li>
+                  </ul>
+                </div>
+                <button class="inv-vctr-pip"><span class="material-icons">picture_in_picture_alt</span></button>
+                <button class="inv-vctr-fullscreen"><i class="fa-solid fa-expand"></i></button>
+              </li>
+            </ul>
+          </div>
+          <video src="media/video_2.mp4" class="inv-video"></video>
+        </div>
+      </div>
+    </div>
+
+    </div>
 
     <footer class="footer">© The State of Queensland 1995–2022</footer>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/script.js"></script>
     <script src="js/animation.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

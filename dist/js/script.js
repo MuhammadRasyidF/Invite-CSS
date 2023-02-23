@@ -26,3 +26,7 @@ var anim1 = new ScrollAnimation(
 window.addEventListener("scroll", () => {
   anim1.animate();
 });
+
+// Video Usage
+const video_1 = new VideoContainer('#video_1')
+const video_2 = new VideoContainer('#video_2')
