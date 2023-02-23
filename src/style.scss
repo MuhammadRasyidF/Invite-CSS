@@ -15,6 +15,7 @@
 @use "modules/button";
 @use "modules/form";
 @use "modules/video";
+@use "modules/envelope";
 
 @import "modules/utilities/mixins";
 @import "modules/variables";
@@ -27,6 +28,20 @@
 body {
   color: map.get($colors, "dark");
   margin: 0;
+  font-family: "Poppins";
+}
+
+p {
+  font-family: "Raleway";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Great Vibes";
 }
 
 .box {
