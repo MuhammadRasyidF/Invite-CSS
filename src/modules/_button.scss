@@ -54,9 +54,6 @@ $button-responsive-sizes: (
   border-width: $button-border-width;
   color: $button-color;
   cursor: pointer;
-  @if $button-family {
-    font-family: $button-family;
-  }
   justify-content: center;
   padding-bottom: $button-padding-vertical;
   padding-left: $button-padding-horizontal;
@@ -76,16 +73,27 @@ $button-responsive-sizes: (
       width: 1.5em;
     }
     &:first-child:not(:last-child) {
-      @include ltr-property("margin", calc(#{-0.5 * $button-padding-horizontal} - #{$button-border-width}), false);
+      @include ltr-property(
+        "margin",
+        calc(#{-0.5 * $button-padding-horizontal} - #{$button-border-width}),
+        false
+      );
       @include ltr-property("margin", $button-padding-horizontal * 0.25);
     }
     &:last-child:not(:first-child) {
       @include ltr-property("margin", $button-padding-horizontal * 0.25, false);
-      @include ltr-property("margin", calc(#{-0.5 * $button-padding-horizontal} - #{$button-border-width}));
+      @include ltr-property(
+        "margin",
+        calc(#{-0.5 * $button-padding-horizontal} - #{$button-border-width})
+      );
     }
     &:first-child:last-child {
-      margin-left: calc(#{-0.5 * $button-padding-horizontal} - #{$button-border-width});
-      margin-right: calc(#{-0.5 * $button-padding-horizontal} - #{$button-border-width});
+      margin-left: calc(
+        #{-0.5 * $button-padding-horizontal} - #{$button-border-width}
+      );
+      margin-right: calc(
+        #{-0.5 * $button-padding-horizontal} - #{$button-border-width}
+      );
     }
   }
   // States

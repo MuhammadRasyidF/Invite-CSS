@@ -7,7 +7,7 @@ $banner-body-padding-large: 18rem 6rem !default;
 
 $banner-colors: var.$colors;
 
-.banner {
+.inv-banner {
   align-items: stretch;
   display: flex;
   flex-direction: column;
@@ -55,16 +55,16 @@ $banner-colors: var.$colors;
     }
   }
 
-  &-fullheight {
+  &.banner-fullheight {
     min-height: 100vh;
   }
 
-  &-halfheight {
+  &.banner-halfheight {
     min-height: 50vh;
   }
 
-  &-fullheight,
-  &-halfheight {
+  &.banner-fullheight,
+  &.banner-halfheight {
     .banner-body {
       align-items: center;
       display: flex;

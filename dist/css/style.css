@@ -152,116 +152,116 @@ table th:not([align]) {
   text-align: inherit;
 }
 
-.row {
+.inv-row {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
 }
 
-.column-1 {
+.inv-column-1 {
   width: 16.6666667%;
   flex: none;
 }
 
-.column-2 {
+.inv-column-2 {
   width: 33.33333335%;
   flex: none;
 }
 
-.column-3 {
+.inv-column-3 {
   width: 50%;
   flex: none;
 }
 
-.column-4 {
+.inv-column-4 {
   width: 66.6666667%;
   flex: none;
 }
 
-.column-5 {
+.inv-column-5 {
   width: 83.33333335%;
   flex: none;
 }
 
-.column-6 {
+.inv-column-6 {
   width: 100%;
   flex: none;
 }
 
-.container {
+.inv-container {
   flex-grow: 1;
   margin: 0 auto;
   position: relative;
   width: auto;
 }
-.container.no-gap {
+.inv-container.no-gap {
   max-width: none !important;
   padding-left: 32px;
   padding-right: 32px;
   width: 100%;
 }
-.container.text-centered {
+.inv-container.text-centered {
   text-align: center !important;
 }
 
-.banner {
+.inv-banner {
   align-items: stretch;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.banner.color-aqua {
+.inv-banner.color-aqua {
   background-color: #626ed4;
 }
-.banner.color-green {
+.inv-banner.color-green {
   background-color: #2aa39a;
 }
-.banner.color-red {
+.inv-banner.color-red {
   background-color: #ec4561;
 }
-.banner.color-orange {
+.inv-banner.color-orange {
   background-color: #f8b425;
 }
-.banner.color-ltblue {
+.inv-banner.color-ltblue {
   background-color: #38a5f8;
 }
-.banner.color-light {
+.inv-banner.color-light {
   background-color: #f8f8fa;
 }
-.banner.color-dark-lightest {
+.inv-banner.color-dark-lightest {
   background-color: #acacac;
 }
-.banner.color-dark {
+.inv-banner.color-dark {
   background-color: #575c62;
 }
-.banner.color-darker {
+.inv-banner.color-darker {
   background-color: #2f3235;
 }
-.banner.color-light-invert {
+.inv-banner.color-light-invert {
   background-color: #000000;
 }
-.banner.color-muted {
+.inv-banner.color-muted {
   background-color: #edecf1;
 }
-.banner .title {
+.inv-banner .title {
   font-family: "Great Vibes", sans-serif;
   color: white;
   font-size: 6rem;
 }
-.banner .subtitle {
+.inv-banner .subtitle {
   color: whitesmoke;
 }
-.banner.has-background {
+.inv-banner.has-background {
   position: relative;
   overflow: hidden;
 }
-.banner.align-item-bottom {
+.inv-banner.align-item-bottom {
   justify-content: flex-end;
 }
-.banner.align-item-top {
+.inv-banner.align-item-top {
   justify-content: flex-start;
 }
-.banner-background {
+.inv-banner-background {
   position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
@@ -271,27 +271,27 @@ table th:not([align]) {
   height: 100%;
   z-index: 1;
 }
-.banner-background.transparent {
+.inv-banner-background.transparent {
   opacity: 0.8;
 }
-.banner-fullheight {
+.inv-banner.banner-fullheight {
   min-height: 100vh;
 }
-.banner-halfheight {
+.inv-banner.banner-halfheight {
   min-height: 50vh;
 }
-.banner-fullheight .banner-body, .banner-halfheight .banner-body {
+.inv-banner.banner-fullheight .banner-body, .inv-banner.banner-halfheight .banner-body {
   align-items: center;
   display: flex;
   padding: 3rem 3rem;
   z-index: 2;
 }
-.banner-fullheight .banner-body > container, .banner-halfheight .banner-body > container {
+.inv-banner.banner-fullheight .banner-body > container, .inv-banner.banner-halfheight .banner-body > container {
   flex-grow: 1;
   flex-shrink: 1;
 }
 
-.grid {
+.inv-grid {
   align-items: stretch;
   justify-content: center;
   display: block;
@@ -301,57 +301,57 @@ table th:not([align]) {
   min-height: -moz-min-content;
   min-height: min-content;
 }
-.grid.grid-container:last-child {
+.inv-grid.grid-container:last-child {
   margin-bottom: -0.75rem;
 }
-.grid.grid-container:not(:last-child) {
+.inv-grid.grid-container:not(:last-child) {
   margin-bottom: 0.75rem;
 }
-.grid.grid-node {
+.inv-grid.grid-node {
   margin: 0 !important;
 }
-.grid.grid-parent {
+.inv-grid.grid-parent {
   padding: 0.75rem;
 }
-.grid.grid-no-padding {
+.inv-grid.grid-no-padding {
   padding: 0;
 }
-.grid.grid-vertical {
+.inv-grid.grid-vertical {
   flex-direction: column;
 }
-.grid.grid-vertical > .grid.grid-node:not(:last-child) {
+.inv-grid.grid-vertical > .grid.grid-node:not(:last-child) {
   margin-bottom: 1.5rem !important;
 }
 @media (min-width: 992px) {
-  .grid:not(.grid-node) {
+  .inv-grid:not(.grid-node) {
     display: flex;
   }
-  .grid.grid-column-1 {
+  .inv-grid.grid-column-1 {
     flex: none;
     width: 16.6666667%;
   }
-  .grid.grid-column-2 {
+  .inv-grid.grid-column-2 {
     flex: none;
     width: 33.33333335%;
   }
-  .grid.grid-column-3 {
+  .inv-grid.grid-column-3 {
     flex: none;
     width: 50%;
   }
-  .grid.grid-column-4 {
+  .inv-grid.grid-column-4 {
     flex: none;
     width: 66.6666667%;
   }
-  .grid.grid-column-5 {
+  .inv-grid.grid-column-5 {
     flex: none;
     width: 83.33333335%;
   }
-  .grid.grid-column-6 {
+  .inv-grid.grid-column-6 {
     flex: none;
     width: 100%;
   }
 }
-.grid.grid-flex:not(.grid-node) {
+.inv-grid.grid-flex:not(.grid-node) {
   display: flex;
 }
 
@@ -562,11 +562,10 @@ table th:not([align]) {
 .media-content {
   flex-basis: auto;
   flex-grow: 1;
-  flex-shrink: 1;
   text-align: inherit;
 }
 
-.footer {
+.inv-footer {
   background-color: #eee;
   color: #5a6491;
   text-align: center;
@@ -575,7 +574,7 @@ table th:not([align]) {
   bottom: 0;
 }
 
-.countdown-container {
+.inv-countdown {
   overflow: hidden !important;
   text-align: center;
 }
@@ -886,7 +885,6 @@ table th:not([align]) {
   border-width: 1px;
   color: #2f3235;
   cursor: pointer;
-  font-family: true;
   justify-content: center;
   padding-bottom: calc(0.5em - 1px);
   padding-left: 1em;
@@ -914,8 +912,12 @@ table th:not([align]) {
   margin-right: calc(-0.5em - 1px);
 }
 .inv-button .icon:first-child:last-child {
-  margin-left: calc(-0.5em - 1px);
-  margin-right: calc(-0.5em - 1px);
+  margin-left: calc(
+        -0.5em - 1px
+      );
+  margin-right: calc(
+        -0.5em - 1px
+      );
 }
 .inv-button:hover, .inv-button.is-hovered {
   border-color: #acacac;
@@ -1249,7 +1251,7 @@ table th:not([align]) {
   box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
   max-width: 100%;
   width: 100%;
-  font-family: Poppins;
+  font-family: "Poppins";
 }
 .inv-input:focus, .inv-input.is-focused, .inv-input:active, .inv-input.is-active {
   outline: none;
@@ -1392,7 +1394,7 @@ table th:not([align]) {
   box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
   max-width: 100%;
   width: 100%;
-  font-family: Poppins;
+  font-family: "Poppins";
   display: block;
   max-width: 100%;
   min-width: 100%;
