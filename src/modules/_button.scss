@@ -17,10 +17,10 @@ $button-padding-horizontal: 1em !default;
 $button-hover-color: map.get($colors, "darker") !default;
 $button-hover-border-color: map.get($colors, "dark-lightest") !default;
 
-$button-focus-color: $link-focus !default;
-$button-focus-border-color: $link-focus-border !default;
+$button-focus-color: $blue-focus !default;
+$button-focus-border-color: $blue-focus-border !default;
 $button-focus-box-shadow-size: 0 0 0 0.125em !default;
-$button-focus-box-shadow-color: bulmaRgba($link, 0.25) !default;
+$button-focus-box-shadow-color: bulmaRgba($blue, 0.25) !default;
 
 $button-colors: $invcolors !default;
 $button-responsive-sizes: (

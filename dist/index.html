@@ -37,9 +37,11 @@
     <script src="js/countdown.js"></script>
   </head>
   <body>
-    <div class="banner banner-halfheight">
-      <p class="title">Large hero</p>
-      <p class="subtitle">Large subtitle</p>
+    <div class="banner banner-halfheight color-ltblue">
+      <center>
+        <p class="title">Banner Title</p>
+        <p class="subtitle">Banner Subtitle</p>
+      </center>
     </div>
     <div class="grid grid-container">
       <div class="grid grid-vertical grid-column-3">
@@ -293,7 +295,7 @@
     <div style="padding: 100px; padding-top: 10px; padding-bottom: 10px">
       <button
         id="launchModal"
-        class="inv-button is-medium is-fullwidth is-danger"
+        class="inv-button is-medium is-fullwidth is-red"
       >
         See Our Lord
       </button>
@@ -314,15 +316,15 @@
     </script>
     <!-- button -->
     <div class="inv-buttons">
-      <button class="inv-button is-primary">Primary</button>
-      <button class="inv-button is-link">Link</button>
+      <button class="inv-button is-aqua">aqua</button>
+      <button class="inv-button is-blue">blue</button>
     </div>
 
     <div class="inv-buttons">
-      <button class="inv-button is-info">Info</button>
-      <button class="inv-button is-success">Success</button>
-      <button class="inv-button is-warning">Warning</button>
-      <button class="inv-button is-danger">Danger</button>
+      <button class="inv-button is-ltblue">ltblue</button>
+      <button class="inv-button is-green">green</button>
+      <button class="inv-button is-orange">orange</button>
+      <button class="inv-button is-red">red</button>
     </div>
 
     <div class="inv-buttons" style="padding: 20px">
@@ -341,20 +343,20 @@
     </div>
 
     <button class="inv-button is-focused">Focus</button>
-    <button class="inv-button is-primary is-focused">Focus</button>
-    <button class="inv-button is-link is-focused">Focus</button>
-    <button class="inv-button is-info is-focused">Focus</button>
-    <button class="inv-button is-success is-focused">Focus</button>
-    <button class="inv-button is-warning is-focused">Focus</button>
-    <button class="inv-button is-danger is-focused">Focus</button>
+    <button class="inv-button is-aqua is-focused">Focus</button>
+    <button class="inv-button is-blue is-focused">Focus</button>
+    <button class="inv-button is-ltblue is-focused">Focus</button>
+    <button class="inv-button is-green is-focused">Focus</button>
+    <button class="inv-button is-orange is-focused">Focus</button>
+    <button class="inv-button is-red is-focused">Focus</button>
     <button class="inv-button is-rounded">Rounded</button>
 
     <div style="padding: 20px">
-      <button class="inv-button is-primary is-rounded">Rounded</button>
-      <button class="inv-button is-link is-rounded">Rounded</button>
-      <button class="inv-button is-info is-rounded">Rounded</button>
-      <button class="inv-button is-success is-rounded">Rounded</button>
-      <button class="inv-button is-danger is-rounded">Rounded</button>
+      <button class="inv-button is-aqua is-rounded">Rounded</button>
+      <button class="inv-button is-blue is-rounded">Rounded</button>
+      <button class="inv-button is-ltblue is-rounded">Rounded</button>
+      <button class="inv-button is-green is-rounded">Rounded</button>
+      <button class="inv-button is-red is-rounded">Rounded</button>
     </div>
     <div>
       <p class="inv-buttons">
@@ -381,19 +383,19 @@
           </span>
           <span>GitHub</span>
         </button>
-        <button class="inv-button is-primary">
+        <button class="inv-button is-aqua">
           <span class="icon">
             <i class="fab fa-twitter"></i>
           </span>
           <span>@Rasyid</span>
         </button>
-        <button class="inv-button is-success">
+        <button class="inv-button is-green">
           <span class="icon is-small">
             <i class="fas fa-check"></i>
           </span>
           <span>Save</span>
         </button>
-        <button class="inv-button is-danger is-outlined">
+        <button class="inv-button is-red is-outlined">
           <span>Delete</span>
           <span class="icon is-small">
             <i class="fas fa-times"></i>
@@ -435,64 +437,48 @@
         margin-bottom: 50px;
       "
     >
-      <div class="inv-alert color-info">This is info alert</div>
+      <div class="inv-alert color-ltblue">This is ltblue alert</div>
 
-      <div class="inv-alert color-success">This is success alert</div>
+      <div class="inv-alert color-green">This is green alert</div>
 
-      <div class="inv-alert color-warning">This is warning alert</div>
+      <div class="inv-alert color-orange">This is orange alert</div>
 
-      <div class="inv-alert color-danger">This is danger alert</div>
+      <div class="inv-alert color-red">This is red alert</div>
 
-      <div class="inv-alert color-light">This is danger alert</div>
+      <div class="inv-alert color-light">This is red alert</div>
 
       <input
         class="inv-input"
         type="text"
-        placeholder="Text info input normal"
+        placeholder="Text input normal"
       />
       <input
         class="inv-input state-focused"
         type="text"
-        placeholder="Text info input focused"
+        placeholder="Text input focused"
       />
       <input
         class="inv-input state-hovered"
         type="text"
-        placeholder="Text info input hovered"
+        placeholder="Text input hovered"
       />
       <input
         class="inv-input state-active"
         type="text"
-        placeholder="Text info input active"
+        placeholder="Text input active"
       />
 
       <textarea class="inv-textarea" placeholder="e.g. Hello world"></textarea>
 
-      <textarea
-        class="inv-textarea"
-        rows="10"
-        placeholder="Text area with 10 lines"
-      ></textarea>
+      <textarea class="inv-textarea" rows="10" placeholder="Text area with 10 lines" ></textarea>
 
-      <textarea
-        class="inv-textarea color-info"
-        placeholder="Info Text Area"
-      ></textarea>
+      <textarea class="inv-textarea color-ltblue" placeholder="Ltblue Text Area"></textarea>
 
-      <textarea
-        class="inv-textarea color-success"
-        placeholder="Success Text Area"
-      ></textarea>
+      <textarea class="inv-textarea color-green" placeholder="Green Text Area"></textarea>
 
-      <textarea
-        class="inv-textarea color-danger"
-        placeholder="Danger Text Area"
-      ></textarea>
+      <textarea class="inv-textarea color-red" placeholder="Red Text Area"></textarea>
 
-      <textarea
-        class="inv-textarea color-warning"
-        placeholder="Warning Text Area"
-      ></textarea>
+      <textarea class="inv-textarea color-orange" placeholder="Orange Text Area"></textarea>
 
       <div class="inv-select">
         <select>
@@ -511,17 +497,28 @@
     <div style="padding: 20px">
       <button class="inv-button is-white">White</button>
       <button class="inv-button is-black">Black</button>
-      <button class="inv-button is-primary">Primary</button>
-      <button class="inv-button is-link">Link</button>
-      <button class="inv-button is-info">Info</button>
-      <button class="inv-button is-success">Success</button>
-      <button class="inv-button is-warning">Warning</button>
-      <button class="inv-button is-danger">Danger</button>
+      <button class="inv-button is-aqua">Aqua</button>
+      <button class="inv-button is-blue">Blue</button>
+      <button class="inv-button is-ltblue">Ltblue</button>
+      <button class="inv-button is-green">Green</button>
+      <button class="inv-button is-orange">Orange</button>
+      <button class="inv-button is-red">Red</button>
     </div>
 
-    <div style="padding: 20px">
-      <button class="inv-button">Button</button>
-    </div>
+      <div style="padding: 20px">
+        <button class="inv-button">Button</button>
+        <div style="margin-top: 100px;"></div>
+        <input class="inv-input color-ltblue" type="text" placeholder="Text ltblue input">
+
+
+<input class="inv-input color-green" type="text" placeholder="Text green input">
+
+
+<input class="inv-input color-orange" type="text" placeholder="Text orange input">
+
+
+<input class="inv-input color-red" type="text" placeholder="Text red input">
+      </div>
     </div>
 
     <div style="
@@ -542,7 +539,6 @@
             <ul class="inv-video-controls">
               <li class="options left">
                 <button class="volume"><i class="fa-solid fa-volume-high"></i></button>
-                <input type="range" class="inv-vctr-volume" min="0" max="1" value="1" step="0.1">
                 <div class="inv-video-timer">
                   <p class="time-current">00:00</p>
                   <p class="separator"> / </p>
@@ -585,7 +581,6 @@
             <ul class="inv-video-controls">
               <li class="options left">
                 <button class="volume"><i class="fa-solid fa-volume-high"></i></button>
-                <input type="range" class="inv-vctr-volume" min="0" max="1" value="1" step="0.1">
                 <div class="inv-video-timer">
                   <p class="time-current">00:00</p>
                   <p class="separator"> / </p>
