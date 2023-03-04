@@ -1807,7 +1807,7 @@ video {
   border-radius: 3px;
   opacity: 0;
   pointer-events: none;
-  width: 10vw;
+  width: 8vw;
   transition: opacity 0.13s ease;
 }
 @media (max-width: 768px) {
