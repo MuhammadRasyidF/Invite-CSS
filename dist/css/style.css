@@ -200,6 +200,12 @@ table th:not([align]) {
   padding-right: 32px;
   width: 100%;
 }
+@media (max-width: 576px) {
+  .inv-container.no-gap {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
 .inv-container.text-centered {
   text-align: center !important;
 }
@@ -1661,8 +1667,8 @@ table th:not([align]) {
 
 .inv-timeline {
   cursor: pointer;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .inv-timeline .inv-progress {
   height: 0.25rem;
@@ -1721,7 +1727,7 @@ video {
 }
 
 .inv-video-controls {
-  padding: 0.25rem 4rem 1.5rem;
+  padding: 0.25rem 3rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1754,8 +1760,7 @@ video {
   justify-content: center;
 }
 .options button {
-  width: 2.5rem;
-  height: 2.5rem;
+  height: 1.375rem;
   border: none;
   color: #fff;
   background-color: transparent;
@@ -1802,8 +1807,18 @@ video {
   border-radius: 3px;
   opacity: 0;
   pointer-events: none;
-  width: 8vw;
+  width: 10vw;
   transition: opacity 0.13s ease;
+}
+@media (max-width: 768px) {
+  .inv-video-playback .speed-options {
+    width: 15vw;
+  }
+}
+@media (max-width: 576px) {
+  .inv-video-playback .speed-options {
+    width: 20vw;
+  }
 }
 .inv-video-playback .speed-options.show {
   opacity: 1;
@@ -1814,6 +1829,12 @@ video {
   font-size: 14px;
   padding: 0.4rem 0rem 0.4rem 0.75rem;
   cursor: pointer;
+}
+@media (max-width: 576px) {
+  .speed-options li {
+    font-size: 10px;
+    padding: 0.25rem 0.375rem;
+  }
 }
 .speed-options li.active {
   background-color: #2289ff;
