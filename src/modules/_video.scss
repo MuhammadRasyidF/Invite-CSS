@@ -1,3 +1,6 @@
+@use "variables" as var;
+@import "utilities/mixins";
+
 $color_1: #fff;
 $color_2: #efefef;
 $background-color_1: black;
@@ -47,8 +50,8 @@ $background-color_4: #2289ff;
 }
 .inv-timeline {
 	cursor: pointer;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
 	.inv-progress {
 		height: .25rem;
 		position: relative;
@@ -64,6 +67,19 @@ $background-color_4: #2289ff;
 					display: block;
 				}
 			}
+		}
+	}
+	
+	@include at-max-breakpoint('small'){
+		& {
+			padding-top: .25rem;
+			padding-bottom: .25rem;
+		}
+	}
+	@include at-max-breakpoint('medium') {
+		& {
+			padding-top: .375rem;
+			padding-bottom: .375rem;
 		}
 	}
 }
@@ -100,7 +116,7 @@ video {
     width: 100%;
 }
 .inv-video-controls {
-	padding: .25rem 4rem 1.5rem;
+	padding: .25rem 3rem 1.5rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -113,15 +129,35 @@ video {
 			justify-content: flex-end;
 		}
 	}
+
+	@include at-max-breakpoint('small') {
+		& {
+			padding: .15rem 0rem .75rem;
+		}
+	}
+
+	@include at-max-breakpoint('medium') {
+		& {
+			padding-left: 1rem;
+			padding-right: 1rem;
+			padding-bottom: .5rem;
+		}
+	}
 }
 .options {
 	button {
-		width: 2.5rem;
-		height: 2.5rem;
+		height: 1.375rem;
 		border: none;
 		color: $color_1;
 		background-color: $background-color_3;
 		font-size: 20px;
+
+		@include at-max-breakpoint('small') {
+			& {
+				font-size: 14px;
+			}
+		}
+
 		i {
 			width: 100%;
 			height: 100%;
@@ -162,6 +198,13 @@ video {
 		pointer-events: none;
 		width: 8vw;
 		transition: opacity 0.13s ease;
+
+		@include at-max-breakpoint('medium') {
+			width: 15vw;
+		}
+		@include at-max-breakpoint('small') {
+			width: 20vw;
+		}
 	}
 	.speed-options.show {
 		opacity: 1;
@@ -173,6 +216,11 @@ video {
 		font-size: 14px;
 		padding: .4rem 0rem .4rem .75rem;
 		cursor: pointer;
+
+		@include at-max-breakpoint('small') {
+			font-size: 10px;
+			padding: .25rem .375rem;
+		}
 	}
 	li.active {
 		background-color: $background-color_4;

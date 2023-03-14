@@ -123,12 +123,23 @@ class VideoContainer {
     handlePlay(name) {
         this.btnPlay = this.obj.find(name).eq(0)
         this.btnPlay.click(() => {
-            this.video.get(0).paused ? this.video.get(0).play() : this.video.get(0).pause()
             if (this.video.get(0).paused) {
-                this.btnPlay.children(':first').removeClass('fa-pause').addClass('fa-play')
+                this.video.get(0).play() 
+                this.btnPlay.children(':first').removeClass('fa-play').addClass('fa-pause')
+                let audio = $("audio")[0];
+                if (audio && !audio.paused) audio.pause();
             }
             else {
-                this.btnPlay.children(':first').removeClass('fa-play').addClass('fa-pause')
+                this.video.get(0).pause()
+                this.btnPlay.children(':first').removeClass('fa-pause').addClass('fa-play')
+                let startAudio = true
+                $('.inv-video').each((v, i) => {
+                    if (!i.paused) startAudio = false
+                })
+                if (startAudio) {
+                    let audio = $("audio")[0];
+                    if (audio && audio.paused) audio.play();
+                }
             }
         })
     }

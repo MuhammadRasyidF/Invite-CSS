@@ -11,6 +11,16 @@
             + "Breakpoint yang tersedia: #{map-keys($breakpoints)}.";
   }
 }
+@mixin at-max-breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Tidak ada breakpoint maksimal bernama `#{$breakpoint}`. "
+            + "Breakpoint maksimal yang tersedia: #{map-keys($breakpoints)}.";
+  }
+}
 
 @mixin overlay($offset: 0) {
   bottom: $offset;

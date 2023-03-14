@@ -226,7 +226,7 @@ body {
   font-family: "Nunito Sans";
 }
 
-.location-info {
+.location-ltblue {
   text-align: left;
   margin-top: 0;
 }
@@ -382,7 +382,7 @@ body {
   .grid.grid-parent {
     padding-bottom: 0;
   }
-  .location-info {
+  .location-ltblue {
     text-align: center;
   }
   .location-titler {
@@ -412,4 +412,26 @@ body {
 .inv-envelope {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../images/gallery-1.png");
+}
+
+.video-wrapper {
+  padding: 3rem 6rem;
+}
+
+@media screen and (max-width: 1600px) {
+  .video-wrapper {
+    padding: 6rem 8rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .video-wrapper {
+    padding: 2rem 4rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .video-wrapper {
+    padding: .75rem 1.5rem;
+  }
 }
