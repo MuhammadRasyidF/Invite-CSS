@@ -134,7 +134,6 @@ class VideoContainer {
                 this.btnPlay.children(':first').removeClass('fa-pause').addClass('fa-play')
                 let startAudio = true
                 $('.inv-video').each((v, i) => {
-                    console.log(i);
                     if (!i.paused) startAudio = false
                 })
                 if (startAudio) {
