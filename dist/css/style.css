@@ -1799,7 +1799,6 @@ video {
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
 .inv-envelope-groom-name {
@@ -1819,6 +1818,9 @@ video {
 }
 .inv-envelope-attende-wrapper {
   padding-top: 6rem;
+}
+.inv-envelope-attende-wrapper p {
+  color: aliceblue;
 }
 .inv-envelope-attende-name {
   font-weight: bold;
