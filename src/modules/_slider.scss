@@ -1,11 +1,11 @@
 @use "sass:map";
 @import "variables";
 
-.slider {
+.inv-slider {
     width: 100%;
     height: auto;
     overflow: hidden;
-    .slides {
+    .inv-slides {
         width: 500%;
         height: auto;
         display: flex;
@@ -14,7 +14,7 @@
             display: none;
         }
 
-        .slide {
+        .inv-slide {
             width: 20%;
             transition: 2s;
 
@@ -26,24 +26,27 @@
     }
 }
 
-.navigation-manual {
+.inv-navigation {
     position: absolute;
     width: 100vw;
     margin-top: -40px;
     display: flex;
     justify-content: center;
 
-    .manual-btn {
+    .inv-navigation-btn {
         border: 2px solid map-get($colors, "light");
         padding: 5px;
         border-radius: 10px;
         cursor: pointer;
         transition: 1s;
+        &.active {
+            background-color: map-get($colors, "light");
+        }   
     }
-    .manual-btn:not(:last-child) {
+    .inv-navigation-btn:not(:last-child) {
         margin-right: .75rem;
     }
-    .manual-btn:hover{
+    .inv-navigation-btn:hover{
         background-color: map-get($colors, "light");
     }
 }

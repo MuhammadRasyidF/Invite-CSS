@@ -14,8 +14,8 @@ class InvSlider {
 
   autoAnimate(sliderCount, milis) {
     setInterval(() => {
-      document.getElementById("radio" + this.counter).checked = true;
-      $('.manual-btn')[this.counter - 1].click()
+      document.getElementById("inv-radio" + this.counter).checked = true;
+      $('.inv-navigation-btn')[this.counter - 1].click()
       this.counter++;
       if (this.counter > sliderCount) {
         this.counter = 1;
@@ -24,13 +24,13 @@ class InvSlider {
   }
 
   loadNavigationBtn() {
-    $('.manual-btn').each((index, element) => {
+    $('.inv-navigation-btn').each((index, element) => {
       $(element).on('click', () => {
         this.counter = index + 1;
         let percentage = (index/ this.sliderCount * 100);
         $('.first').css('margin-left', `-${percentage}%`)
-        $('.manual-btn').css('background-color', 'none');
-        $(this).css('background-color', 'white');
+        $('.inv-navigation-btn').removeClass('active');
+        $(element).addClass('active');
       })
     })
   }
