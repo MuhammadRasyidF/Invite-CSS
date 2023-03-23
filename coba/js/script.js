@@ -20,7 +20,7 @@ $(document).ready(() => {
     });
   });
   
-  
+  const video_2 = new VideoContainer('#videoId1')
 
   // Animation Usage
   var anim1 = new ScrollAnimation(

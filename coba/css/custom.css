@@ -188,3 +188,8 @@ body {
     margin-top: 10px;
     color: #f0c433;
 }
+
+.video-wrapper{
+    width: 100%;
+    padding: 5rem 4rem;
+}
