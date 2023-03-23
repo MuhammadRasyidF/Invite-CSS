@@ -1,0 +1,52 @@
+@use "sass:map";
+@import "variables";
+
+.inv-slider {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    .inv-slides {
+        width: 500%;
+        height: auto;
+        display: flex;
+
+        input {
+            display: none;
+        }
+
+        .inv-slide {
+            width: 20%;
+            transition: 2s;
+
+            img {
+                width: 100vw;
+                height: auto;
+            }
+        }
+    }
+}
+
+.inv-navigation {
+    position: absolute;
+    width: 100vw;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+
+    .inv-navigation-btn {
+        border: 2px solid map-get($colors, "light");
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+        &.active {
+            background-color: map-get($colors, "light");
+        }   
+    }
+    .inv-navigation-btn:not(:last-child) {
+        margin-right: .75rem;
+    }
+    .inv-navigation-btn:hover{
+        background-color: map-get($colors, "light");
+    }
+}

@@ -4,60 +4,59 @@
 
 $tile-spacing: 0.75rem !default;
 
-.grid{
-    align-items: stretch;
-    justify-content: center;
-    display: block;
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-shrink: 1;
-    min-height: min-content;
-    // Modifiers
-    &.grid-container{
-        // margin-left: $tile-spacing * -1;
-        // margin-right: $tile-spacing * -1;
-        // margin-top: $tile-spacing * -1;
-        &:last-child{
-            margin-bottom: $tile-spacing * -1;
-        }
-        &:not(:last-child){
-            margin-bottom: $tile-spacing;
-        }
+.inv-grid {
+  align-items: stretch;
+  justify-content: center;
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-height: min-content;
+  // Modifiers
+  &.grid-container {
+    // margin-left: $tile-spacing * -1;
+    // margin-right: $tile-spacing * -1;
+    // margin-top: $tile-spacing * -1;
+    &:last-child {
+      margin-bottom: $tile-spacing * -1;
     }
-        
-    &.grid-node{
-        margin: 0 !important
+    &:not(:last-child) {
+      margin-bottom: $tile-spacing;
     }
-        
-    &.grid-parent{
-        padding: $tile-spacing
+  }
+
+  &.grid-node {
+    margin: 0 !important;
+  }
+
+  &.grid-parent {
+    padding: $tile-spacing;
+  }
+  &.grid-no-padding {
+    padding: 0;
+  }
+
+  &.grid-vertical {
+    flex-direction: column;
+    & > .grid.grid-node:not(:last-child) {
+      margin-bottom: 1.5rem !important;
     }
-    &.grid-no-padding{
-        padding: 0;
+  }
+
+  // Responsiveness
+  @include at-breakpoint("large") {
+    &:not(.grid-node) {
+      display: flex;
     }
-        
-    &.grid-vertical{
-        flex-direction: column;
-        & > .grid.grid-node:not(:last-child){
-            margin-bottom: 1.5rem !important
-        }
+
+    @for $i from 1 through $n-columns {
+      &.grid-column-#{$i} {
+        flex: none;
+        width: (divide($i, $n-columns)) * 100%;
+      }
     }
-        
-    // Responsiveness
-    @include at-breakpoint('large'){
-        &:not(.grid-node){
-            display: flex;
-        }
-        
-        @for $i from 1 through $n-columns{
-            &.grid-column-#{$i}{
-                flex: none;
-                width: (divide($i, $n-columns)) * 100%;
-            }
-        }
-    }
-    &.grid-flex:not(.grid-node) {
-        display: flex;
-    }
+  }
+  &.grid-flex:not(.grid-node) {
+    display: flex;
+  }
 }
-  

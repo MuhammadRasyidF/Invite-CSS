@@ -1,4 +1,7 @@
-.container {
+@use "variables" as var;
+@import "utilities/mixins";
+
+.inv-container {
   flex-grow: 1;
   margin: 0 auto;
   position: relative;
@@ -9,6 +12,11 @@
     padding-left: 32px;
     padding-right: 32px;
     width: 100%;
+
+    @include at-max-breakpoint('small') {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
   }
 
   &.text-centered {

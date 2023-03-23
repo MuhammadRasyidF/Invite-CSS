@@ -18,28 +18,56 @@
 
     <script src="https://cdn.jsdelivr.net/gh/MuhammadRasyidF/Invite-CSS@1.0.0/dist/js/countdown.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/MuhammadRasyidF/Invite-CSS@1.0.0/dist/js/animation.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+      integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body>
     <div class="inv-envelope">
       <div class="inv-envelope-content-wrapper">
-        <div class="inv-envelope-groom-name">Overlay Text</div>
+        <div class="inv-envelope-groom-name">Loid & Yor</div>
         <div class="inv-envelope-date-of-event">10 Juli 2023</div>
         <div class="inv-envelope-attende-wrapper">
-          <p style="color: aliceblue">Kepada Yth.<br />Bapak/Ibu/Saudara/i:</p>
+          <p>Kepada Yth.<br />Bapak/Ibu/Saudara/i:</p>
           <div class="inv-envelope-attende-name">Reihan</div>
         </div>
         <button id="open-env" class="btn-open-env">Buka Undangan</button>
       </div>
     </div>
-    <div class="banner banner-fullheight banner-first">
+
+    <div class="inv-banner banner-fullheight banner-first">
       <p class="title">Loid & Yor</p>
       <p class="subtitle">—&emsp;We are getting married&emsp;—</p>
       <div class="grid-wrapper">
         <div class="counter-grid">
-          <div class="grid grid-flex grid-container">
-            <div class="grid grid-parent grid-vertical">
-              <div class="grid">
-                <div class="grid grid-flex grid-parent countdown-container">
+          <div class="inv-grid grid-flex grid-container">
+            <div class="inv-grid grid-parent grid-vertical">
+              <div class="inv-grid">
+                <div class="inv-grid grid-flex grid-parent countdown-container">
                   <div class="grid-node countdown-box" id="cntd-d-1">
                     <div class="countdown-digit" id="cntd-d-1-now">0</div>
                   </div>
@@ -51,11 +79,13 @@
                   </div>
                 </div>
               </div>
-              <div class="grid grid-flex grid-parent countdown-text">Hari</div>
+              <div class="inv-grid grid-flex grid-parent countdown-text">
+                Hari
+              </div>
             </div>
-            <div class="grid grid-parent grid-vertical">
-              <div class="grid">
-                <div class="grid grid-flex grid-parent countdown-container">
+            <div class="inv-grid grid-parent grid-vertical">
+              <div class="inv-grid">
+                <div class="inv-grid grid-flex grid-parent inv-countdown">
                   <div class="grid-node countdown-box" id="cntd-h-1">
                     <div class="countdown-digit" id="cntd-h-1-now">0</div>
                   </div>
@@ -64,11 +94,13 @@
                   </div>
                 </div>
               </div>
-              <div class="grid grid-flex grid-parent countdown-text">Jam</div>
+              <div class="inv-grid grid-flex grid-parent countdown-text">
+                Jam
+              </div>
             </div>
-            <div class="grid grid-parent grid-vertical">
-              <div class="grid">
-                <div class="grid grid-flex grid-parent countdown-container">
+            <div class="inv-grid grid-parent grid-vertical">
+              <div class="inv-grid">
+                <div class="inv-grid grid-flex grid-parent inv-countdown">
                   <div class="grid-node countdown-box" id="cntd-m-1">
                     <div class="countdown-digit" id="cntd-m-1-now">0</div>
                   </div>
@@ -77,11 +109,13 @@
                   </div>
                 </div>
               </div>
-              <div class="grid grid-flex grid-parent countdown-text">Menit</div>
+              <div class="inv-grid grid-flex grid-parent countdown-text">
+                Menit
+              </div>
             </div>
-            <div class="grid grid-parent grid-vertical">
-              <div class="grid">
-                <div class="grid grid-flex grid-parent countdown-container">
+            <div class="inv-grid grid-parent grid-vertical">
+              <div class="inv-grid">
+                <div class="inv-grid grid-flex grid-parent inv-countdown">
                   <div class="grid-node countdown-box" id="cntd-s-1">
                     <div class="countdown-digit" id="cntd-s-1-now">0</div>
                   </div>
@@ -90,7 +124,9 @@
                   </div>
                 </div>
               </div>
-              <div class="grid grid-flex grid-parent countdown-text">Detik</div>
+              <div class="inv-grid grid-flex grid-parent countdown-text">
+                Detik
+              </div>
             </div>
           </div>
         </div>
@@ -99,9 +135,9 @@
     </div>
 
     <div class="story-wrapper">
-      <div class="row">
-        <div class="column-6 wrapper-title inv-reveal">Our Story</div>
-        <div class="column-6 wrapper-content inv-scale">
+      <div class="inv-row">
+        <div class="inv-column-6 wrapper-title inv-reveal">Our Story</div>
+        <div class="inv-column-6 wrapper-content inv-scale">
           <p>
             Loid receives an urgent mission to recover stolen treasures. After
             Loid finishes his mission, he went to the party and accidentally
@@ -126,8 +162,8 @@
     </div>
 
     <div class="gap-wrapper">
-      <div class="row">
-        <div class="column-6 inv-reveal">
+      <div class="inv-row">
+        <div class="inv-column-6 inv-reveal">
           31<sup>th</sup> December 2022
           <p class="gap-location">New York, United States</p>
         </div>
@@ -135,9 +171,11 @@
     </div>
 
     <div class="bride-wrapper">
-      <div class="row">
-        <div class="column-6 wrapper-title inv-opacity">The Groom & Bride</div>
-        <div class="column-3 wrapper-content inv-reveal">
+      <div class="inv-row">
+        <div class="inv-column-6 wrapper-title inv-opacity">
+          The Groom & Bride
+        </div>
+        <div class="inv-column-3 wrapper-content inv-reveal">
           <center>
             <figure class="inv-image is-256x256 bride-photo">
               <!-- <img class="has-ratio" width="200" src="https://assets.promediateknologi.com/crop/0x0:0x0/x/photo/2022/02/24/180111210.jpg" /> -->
@@ -154,7 +192,7 @@
             </p>
           </center>
         </div>
-        <div class="column-3 wrapper-content inv-reveal">
+        <div class="inv-column-3 wrapper-content inv-reveal">
           <center>
             <figure class="inv-image is-256x256 bride-photo">
               <!-- <img class="has-ratio" width="200" src="https://assets.promediateknologi.com/crop/0x0:0x0/x/photo/2022/02/24/180111210.jpg" /> -->
@@ -175,67 +213,69 @@
     </div>
 
     <div class="gallery-wrapper">
-      <div class="row">
-        <div class="column-6 wrapper-title inv-reveal-rand">Our Gallery</div>
-        <div class="column-6 wrapper-content inv-reveal-rand">
+      <div class="inv-row">
+        <div class="inv-column-6 wrapper-title inv-reveal-rand">
+          Our Gallery
+        </div>
+        <div class="inv-column-6 wrapper-content inv-reveal-rand">
           <p>I’m always counting on you for the things that I can’t do</p>
         </div>
-        <div class="column-6 grid-gallery">
-          <div class="grid grid-vertical">
-            <div class="grid grid-parent">
-              <div class="grid grid-parent">
-                <div class="grid grid-node inv-reveal-rand">
+        <div class="inv-column-6 grid-gallery">
+          <div class="inv-grid grid-vertical">
+            <div class="inv-grid grid-parent">
+              <div class="inv-grid grid-parent">
+                <div class="inv-grid grid-node inv-reveal-rand">
                   <figure class="inv-image is-md-width-rectangle">
                     <img width="800" src="images/gallery-1.png" />
                   </figure>
                 </div>
               </div>
-              <div class="grid grid-parent">
-                <div class="grid grid-node inv-reveal-rand">
+              <div class="inv-grid grid-parent">
+                <div class="inv-grid grid-node inv-reveal-rand">
                   <figure class="inv-image is-md-width-rectangle">
                     <img width="800" src="images/gallery-2.png" />
                   </figure>
                 </div>
               </div>
-              <div class="grid grid-parent">
-                <div class="grid grid-node inv-reveal-rand">
+              <div class="inv-grid grid-parent">
+                <div class="inv-grid grid-node inv-reveal-rand">
                   <figure class="inv-image is-md-width-rectangle">
                     <img width="800" src="images/gallery-3.png" />
                   </figure>
                 </div>
               </div>
-              <div class="grid grid-parent">
-                <div class="grid grid-node inv-reveal-rand">
+              <div class="inv-grid grid-parent">
+                <div class="inv-grid grid-node inv-reveal-rand">
                   <figure class="inv-image is-md-width-rectangle">
                     <img width="800" src="images/gallery-4.png" />
                   </figure>
                 </div>
               </div>
             </div>
-            <div class="grid grid-parent">
-              <div class="grid grid-parent">
-                <div class="grid grid-node inv-reveal-rand">
+            <div class="inv-grid grid-parent">
+              <div class="inv-grid grid-parent">
+                <div class="inv-grid grid-node inv-reveal-rand">
                   <figure class="inv-image is-md-width-rectangle">
                     <img width="800" src="images/gallery-5.png" />
                   </figure>
                 </div>
               </div>
-              <div class="grid grid-parent">
-                <div class="grid grid-node inv-reveal-rand">
+              <div class="inv-grid grid-parent">
+                <div class="inv-grid grid-node inv-reveal-rand">
                   <figure class="inv-image is-md-width-rectangle">
                     <img width="800" src="images/gallery-6.png" />
                   </figure>
                 </div>
               </div>
-              <div class="grid grid-parent">
-                <div class="grid grid-node inv-reveal-rand">
+              <div class="inv-grid grid-parent">
+                <div class="inv-grid grid-node inv-reveal-rand">
                   <figure class="inv-image is-md-width-rectangle">
                     <img width="800" src="images/gallery-7.png" />
                   </figure>
                 </div>
               </div>
-              <div class="grid grid-parent">
-                <div class="grid grid-node inv-reveal-rand">
+              <div class="inv-grid grid-parent">
+                <div class="inv-grid grid-node inv-reveal-rand">
                   <figure class="inv-image is-md-width-rectangle">
                     <img width="800" src="images/gallery-8.png" />
                   </figure>
@@ -248,8 +288,8 @@
     </div>
 
     <div class="location-wrapper">
-      <div class="row">
-        <div class="column-3">
+      <div class="inv-row">
+        <div class="inv-column-3">
           <div class="inv-card rsvp-card inv-reveal">
             <div class="card-content">
               <span class="form-title">Confirmation</span>
@@ -257,7 +297,7 @@
                 >Please fill out the following form</span
               >
               <div class="form-input">
-                <div class="column-6">
+                <div class="inv-column-6">
                   <input
                     class="inv-input"
                     type="text"
@@ -266,7 +306,7 @@
                     id=""
                   />
                 </div>
-                <div class="column-6">
+                <div class="inv-column-6">
                   <input
                     class="inv-input"
                     type="email"
@@ -275,7 +315,7 @@
                     id=""
                   />
                 </div>
-                <div class="column-6">
+                <div class="inv-column-6">
                   <div
                     class="inv-select"
                     style="width: 100%; margin-bottom: 1rem"
@@ -287,7 +327,7 @@
                     </select>
                   </div>
                 </div>
-                <div class="column-6">
+                <div class="inv-column-6">
                   <textarea
                     class="inv-textarea"
                     name=""
@@ -296,14 +336,12 @@
                     rows="5"
                   ></textarea>
                 </div>
-                <button class="inv-button is-primary is-fullwidth">
-                  Kirim
-                </button>
+                <button class="inv-button is-aqua is-fullwidth">Kirim</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="column-3 location-info wrapper-content">
+        <div class="inv-column-3 location-info wrapper-content">
           <div class="location-titler inv-reveal">Time & Place</div>
           <div class="location-subtitler">
             <div class="inv-reveal">
@@ -338,8 +376,8 @@
     ></iframe>
 
     <div class="thank-wrapper">
-      <div class="row">
-        <div class="column-6">
+      <div class="inv-row">
+        <div class="inv-column-6">
           <div class="inv-reveal">
             Merupakan kebahagiaan bagi kami apabila anda berkenan hadir pada
             acara pernikahan kami.
@@ -349,13 +387,108 @@
       </div>
     </div>
 
+    <div class="slider-wrapper">
+      <div class="inv-slider">
+        <div class="inv-slides">
+          <input type="radio" name="radio-btn" id="inv-radio1">
+          <input type="radio" name="radio-btn" id="inv-radio2">
+          <input type="radio" name="radio-btn" id="inv-radio3">
+          <input type="radio" name="radio-btn" id="inv-radio4">
+          <input type="radio" name="radio-btn" id="inv-radio5">
+          
+          <div class="inv-slide first">
+            <img src="images/slider-1.png" alt="slider-1">
+          </div>
+          <div class="inv-slide">
+            <img src="images/slider-2.png" alt="slider-2">
+          </div>
+          <div class="inv-slide">
+            <img src="images/slider-3.png" alt="slider-3">
+          </div>
+          <div class="inv-slide">
+            <img src="images/slider-4.png" alt="slider-4">
+          </div>
+          <div class="inv-slide">
+            <img src="images/slider-5.png" alt="slider-5">
+          </div>
+        </div>
+        <div class="inv-navigation">
+          <label for="radio1" class="inv-navigation-btn active"></label>
+          <label for="radio2" class="inv-navigation-btn"></label>
+          <label for="radio3" class="inv-navigation-btn"></label>
+          <label for="radio4" class="inv-navigation-btn"></label>
+          <label for="radio5" class="inv-navigation-btn"></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-wrapper">
+      <div class="inv-row">
+        <div class="inv-column-6">
+          <div class="inv-video-container show-controls" id="video_1">
+            <div class="wrapper">
+              <div class="inv-timeline">
+                <div class="inv-progress">
+                  <span>00:00</span>
+                  <div class="inv-progress-bar"></div>
+                </div>
+              </div>
+              <ul class="inv-video-controls">
+                <li class="options left">
+                  <button class="volume">
+                    <i class="fa-solid fa-volume-high"></i>
+                  </button>
+                  <div class="inv-video-timer">
+                    <p class="time-current">00:00</p>
+                    <p class="separator">/</p>
+                    <p class="time-end">00:00</p>
+                  </div>
+                </li>
+                <li class="options center">
+                  <button class="inv-vctr-seek-back">
+                    <i class="fas fa-backward"></i>
+                  </button>
+                  <button class="inv-vctr-play-pause">
+                    <i class="fas fa-play"></i>
+                  </button>
+                  <button class="inv-vctr-seek-forward">
+                    <i class="fas fa-forward"></i>
+                  </button>
+                </li>
+                <li class="options right">
+                  <div class="inv-video-playback">
+                    <button class="inv-vctr-playback">
+                      <span class="material-symbols-outlined"
+                        >slow_motion_video</span
+                      >
+                    </button>
+                    <ul class="speed-options">
+                      <li data-speed="2">2x</li>
+                      <li data-speed="1.5">1.5x</li>
+                      <li data-speed="1" class="active">1x</li>
+                      <li data-speed="0.75">0.75x</li>
+                      <li data-speed="0.5">0.5x</li>
+                    </ul>
+                  </div>
+                  <button class="inv-vctr-fullscreen">
+                    <i class="fa-solid fa-expand"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <video src="video/video_1.mp4" class="inv-video"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="footer-wrapper">
-      <div class="row">
-        <div class="column-2 footer-data">
+      <div class="inv-row">
+        <div class="inv-column-2 footer-data">
           Contact Us
           <span> +62 812-345-678 </span>
         </div>
-        <div class="column-2 footer-data">
+        <div class="inv-column-2 footer-data">
           Social Links
           <span>
             <p class="footer-social">
@@ -365,14 +498,14 @@
             </p>
           </span>
         </div>
-        <div class="column-2 footer-data">
+        <div class="inv-column-2 footer-data">
           Email
           <span> invitecss@example.com </span>
         </div>
       </div>
     </div>
     <footer class="invite-footer">
-      <div class="column-6 footer-copy">
+      <div class="inv-column-6 footer-copy">
         &copy; 2022, Invite CSS. All rights reserved.
       </div>
     </footer>
@@ -401,6 +534,8 @@
     crossorigin="anonymous"
   ></script>
   <script src="../../dist/js/music_envelope.js"></script>
+  <script src="../../dist/js/video.js"></script>
+  <script src="../../dist/js/slider.js"></script>
   <script src="js/script.js"></script>
   <script>
     $(".grid-node").click(function (event) {
@@ -417,5 +552,7 @@
     $(".modal-background").click(function () {
       $(".inv-modal").removeClass("is-active");
     });
+    const video_1 = new VideoContainer("#video_1");
+    const slider = new InvSlider(5, 4000);
   </script>
 </html>
