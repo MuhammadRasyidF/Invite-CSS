@@ -91,7 +91,9 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
-  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
 }
 
 article,
@@ -267,8 +269,10 @@ table th:not([align]) {
 }
 .inv-banner-background {
   position: absolute;
-  object-fit: cover;
-  object-position: center center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -300,6 +304,7 @@ table th:not([align]) {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
+  min-height: -moz-min-content;
   min-height: min-content;
 }
 .inv-grid.grid-container:last-child {
@@ -653,7 +658,6 @@ table th:not([align]) {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -881,7 +885,6 @@ table th:not([align]) {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   background-color: #f8f8fa;
   border-color: #acacac;
@@ -1896,6 +1899,49 @@ video {
 .inv-envelope .btn-open-env:hover {
   background-color: white;
   color: #303d4c;
+}
+
+.slider {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.slider .slides {
+  width: 500%;
+  height: auto;
+  display: flex;
+}
+.slider .slides input {
+  display: none;
+}
+.slider .slides .slide {
+  width: 20%;
+  transition: 2s;
+}
+.slider .slides .slide img {
+  width: 100vw;
+  height: auto;
+}
+
+.navigation-manual {
+  position: absolute;
+  width: 100vw;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+.navigation-manual .manual-btn {
+  border: 2px solid #f8f8fa;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+.navigation-manual .manual-btn:not(:last-child) {
+  margin-right: 0.75rem;
+}
+.navigation-manual .manual-btn:hover {
+  background-color: #f8f8fa;
 }
 
 body {
