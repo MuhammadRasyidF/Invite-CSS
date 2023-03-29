@@ -1853,6 +1853,8 @@ video {
   min-height: 100vh;
   width: 100%;
   z-index: 2;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .inv-envelope-groom-name {
   font-family: "Great Vibes";
@@ -1910,6 +1912,7 @@ video {
   width: 500%;
   height: auto;
   display: flex;
+  position: relative;
 }
 .inv-slider .inv-slides input {
   display: none;
@@ -1945,6 +1948,46 @@ video {
 }
 .inv-navigation .inv-navigation-btn:hover {
   background-color: #f8f8fa;
+}
+
+.inv-navigation-arrow {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.inv-navigation-arrow .navigation-box {
+  position: relative;
+  height: 100%;
+}
+.inv-navigation-arrow .navigation-box .left-arrow {
+  position: absolute;
+  left: 2.5rem;
+  top: -3rem;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  color: rgba(255, 255, 255, 0.6);
+  height: 0;
+}
+.inv-navigation-arrow .navigation-box .left-arrow span svg {
+  cursor: pointer;
+  z-index: 3;
+}
+.inv-navigation-arrow .navigation-box .right-arrow {
+  position: absolute;
+  right: 3.875rem;
+  top: -3rem;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  color: rgba(255, 255, 255, 0.6);
+  height: 0;
+}
+.inv-navigation-arrow .navigation-box .right-arrow span svg {
+  cursor: pointer;
+  z-index: 3;
 }
 
 body {
