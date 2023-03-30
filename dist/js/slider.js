@@ -3,24 +3,27 @@ class InvSlider {
   milis = null;
   navigationBtn = [];
   counter = 0;
+  animate = null
 
   constructor(sliderCount, milis) {
     console.log("sliderCount " + sliderCount, "\nmilis" + milis);
     this.sliderCount = sliderCount
     this.counter = 1;
-    this.autoAnimate(sliderCount, milis);
+    this.milis = milis
+    this.autoAnimate();
     this.loadNavigationBtn();
+    this.loadNavigationBtnArrow();
   }
 
-  autoAnimate(sliderCount, milis) {
-    setInterval(() => {
-      document.getElementById("inv-radio" + this.counter).checked = true;
-      $('.inv-navigation-btn')[this.counter - 1].click()
+  autoAnimate() {
+    this.animate = setInterval(() => {
       this.counter++;
-      if (this.counter > sliderCount) {
+      if (this.counter > this.sliderCount) {
         this.counter = 1;
       }
-    }, milis);
+      document.getElementById("inv-radio" + this.counter).checked = true;
+      $('.inv-navigation-btn')[this.counter - 1].click()
+    }, this.milis);
   }
 
   loadNavigationBtn() {
@@ -32,6 +35,27 @@ class InvSlider {
         $('.inv-navigation-btn').removeClass('active');
         $(element).addClass('active');
       })
+    })
+  }
+
+  loadNavigationBtnArrow() {
+    $('#navigation-next').click(() => {
+      clearInterval(this.animate)
+      this.counter++;
+      if (this.counter > this.sliderCount) {
+        this.counter = 1;
+      }
+      $('.inv-navigation-btn')[this.counter - 1].click()
+      this.autoAnimate()
+    })
+    $('#navigation-prev').click(() => {
+      clearInterval(this.animate)
+      this.counter--;
+      if (this.counter < 1) {
+        this.counter = this.sliderCount;
+      }
+      $('.inv-navigation-btn')[this.counter - 1].click()
+      this.autoAnimate()
     })
   }
 }

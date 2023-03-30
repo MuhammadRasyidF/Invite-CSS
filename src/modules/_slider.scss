@@ -9,6 +9,7 @@
         width: 500%;
         height: auto;
         display: flex;
+        position: relative;
 
         input {
             display: none;
@@ -48,5 +49,52 @@
     }
     .inv-navigation-btn:hover{
         background-color: map-get($colors, "light");
+    }
+}
+
+.inv-navigation-arrow {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    
+    .navigation-box {
+        position: relative;
+        height: 100%;
+        .left-arrow {
+            position: absolute;
+            left: 2.5rem;
+            top: -3rem;
+            bottom: 0;
+            margin: auto;
+            display: flex;
+            color: rgba($color: #FFFFFF, $alpha: 0.6);
+            height: 0;
+            span {
+                svg {
+                    cursor: pointer;
+                    z-index: 3;
+                }
+            }
+        }
+        .right-arrow {
+            position: absolute;
+            right: 3.875rem;
+            top: -3rem;
+            bottom: 0;
+            margin: auto;
+            display: flex;
+            color: rgba($color: #FFFFFF, $alpha: 0.6);
+            height: 0;
+            span {
+                svg {
+                    cursor: pointer;
+                    z-index: 3;
+                }
+            }
+        }
+
+        
     }
 }
