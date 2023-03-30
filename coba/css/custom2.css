@@ -67,7 +67,7 @@ body {
 }
 
 .second-banner .title{
-    font-family: 'Nunito Sans';
+    font-family: 'Dancing Script', cursive;
     font-size: 35px;
     color: #f0c433;
 }
@@ -130,6 +130,20 @@ body {
         width: 100%;
         margin-top: 1rem;
     }
+    .title{
+        font-size: 25px!important;
+    }
+    .subtitle{
+        font-size: 15px!important;
+    }
+    .info{
+        width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .information-wrapper iframe{
+        width: 100%!important;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -149,6 +163,7 @@ body {
 }
 
 .countdown-wrapper{
+    padding-top: 5rem;
     width: 100%;
     min-height: 57vh;
     background: url("../image/B5.png");
@@ -186,8 +201,19 @@ body {
     padding-top: 8rem;
   }
 
+.info-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.wrapper-box{
+    display: block;
+    width: 100%;
+}
+  
 .information-wrapper .title{
-    margin-top: 15vh;
     font-size: 10vh;
     color: #ffe285;
     font-family: 'Dancing Script', cursive;
@@ -219,6 +245,7 @@ body {
 
 .inv-card{
     background-color: #676666;
+    width: 30rem;
 }
 
 .form-title {
