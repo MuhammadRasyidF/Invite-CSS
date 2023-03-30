@@ -17,7 +17,7 @@ body {
 
 .inv-envelope {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../image/rehan.JPG");
+        url("../image/agatha.png");
     background-size: cover;
     font-family: 'Dancing Script', cursive;
 }

@@ -17,8 +17,8 @@ $(document).ready(() => {
     });
   });
   
-  const video_1 = new VideoContainer('#videoId1')
-  const video_2 = new VideoContainer('#videoId2')
+  const video_1 = new VideoContainer('#video_1')
+  const video_2 = new VideoContainer('#video_2')
 
   // Animation Usage
   var anim1 = new ScrollAnimation(
