@@ -1,0 +1,437 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes");
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@0,300;0,400;0,700");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+html,
+body {
+  background-color: white;
+}
+
+.banner-first {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://media.tenor.com/Q5J4v3mEz-UAAAAd/spy-x-family-proposal.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.banner-first .title {
+  white-space: nowrap;
+  line-height: 112px;
+  font-weight: 400;
+}
+
+.banner-first .subtitle {
+  margin-top: 2.5rem;
+}
+
+.grid-wrapper {
+  margin-top: 1.5rem;
+  padding-left: 25rem;
+  padding-right: 25rem;
+  color: white;
+  font-weight: 700;
+  font-size: 54px;
+}
+.countdown-text {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.reservation-btn {
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  font-size: 16px;
+  margin-top: 4rem;
+  font-weight: 400;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  border: 3px solid white;
+  transition: all 0.25s ease-in-out;
+}
+
+.open-env-btn {
+  padding: 1rem;
+}
+
+.reservation-btn:hover {
+  background-color: white;
+  color: #303d4c;
+}
+
+.wrapper-title {
+  font-size: 30px;
+  line-height: 1.35em;
+  font-weight: 300;
+  color: #333;
+  text-align: center;
+}
+
+.wrapper-content {
+  margin-top: 1.75rem;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.story-wrapper {
+  text-align: center;
+  padding: 5rem 14rem;
+  line-height: 27px;
+  color: #949494;
+}
+
+.quotes {
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+.gap-wrapper {
+  text-align: center;
+  padding: 10rem 10rem;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://pic-bstarstatic.akamaized.net/ugc/adb89849a5d93c8904e15eaa5dfd8720.jpeg");
+  color: white;
+  font-size: 30px;
+}
+
+.gap-location {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.bride-wrapper {
+  padding: 5rem 14rem;
+}
+
+.bride-name {
+  display: block;
+  font-size: 52px;
+  color: #333;
+  margin-top: 1.5rem;
+  font-family: "Great Vibes";
+}
+.inv-image.is-256x256.bride-photo {
+  height: auto;
+}
+.bride-social {
+  margin-top: 2rem;
+}
+.bride-social i {
+  cursor: pointer;
+  font-size: 22px;
+}
+.bride-social i:not(:last-of-type) {
+  margin-right: 0.75rem;
+}
+
+.bride-description {
+  margin-top: 1rem;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Raleway;
+  line-height: 27px;
+  color: #949494;
+}
+
+.inv-image img {
+  width: 10vw;
+}
+
+.gallery-wrapper {
+  text-align: center;
+  padding: 3rem 10rem;
+}
+
+.grid.grid-node .inv-image {
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+.grid.grid-node .inv-image:hover {
+  opacity: 0.75;
+}
+
+.grid-gallery {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.grid.grid-parent {
+  padding-bottom: 0;
+}
+
+.location-wrapper {
+  padding: 8rem 12rem;
+  text-align: center;
+  background: #f0f0f0;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://wallpaperaccess.com/full/2677518.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rsvp-card {
+  width: 80%;
+}
+
+.rsvp-card .card-content {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.location-title {
+  font-family: Raleway, sans-serif;
+  color: #4a3e5a;
+  line-height: 62px;
+  font-size: 33px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.location-titler {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.location-subtitler {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  margin-top: 1.5rem;
+}
+
+.location-subtitler .wide-p {
+  font-weight: 700;
+  width: fit-content;
+  padding-bottom: 0.5rem;
+}
+.location-subtitler .wide-p:hover {
+  border-bottom: 2px solid white;
+  cursor: pointer;
+}
+
+.location-subtitler .wide-p .time {
+  font-size: 30px;
+  font-family: "Nunito Sans";
+}
+
+.location-ltblue {
+  text-align: left;
+  margin-top: 0;
+}
+
+.form-wrapper {
+  padding: 5rem 30rem;
+}
+
+.form-wrapper .inv-card .card-content {
+  text-align: center;
+  font-size: 22px;
+}
+
+.wide-p {
+  padding-top: 2rem;
+}
+
+.form-title {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 22px;
+}
+
+.form-subtitle {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  font-family: Raleway;
+}
+
+.form-input {
+  padding: 0 1.5rem;
+}
+
+.thank-wrapper {
+  padding: 8rem 12rem;
+  font-size: 14px;
+  text-align: center;
+  font-family: Raleway;
+  line-height: 27px;
+  font-style: italic;
+}
+
+.thank-name {
+  font-family: "Great Vibes";
+  font-size: 52px;
+  margin-top: 3rem;
+}
+
+.footer-wrapper {
+  padding: 3rem 12rem;
+  background-color: #303d4c;
+  color: white;
+}
+
+.footer-wrapper .row div {
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer-data {
+  font-size: 16px;
+}
+
+.footer-data span {
+  margin-top: 1rem;
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  color: #afafaf;
+  font-family: Raleway;
+}
+
+.invite-footer {
+  background-color: #20262c;
+  margin-top: 0;
+  font-weight: 300;
+  font-size: 14px;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.footer-social i:not(:last-of-type) {
+  margin-right: 0.5rem;
+}
+.footer-social i {
+  font-size: 18px;
+}
+
+.inv-input {
+  font-size: 14px;
+
+  padding: 1.5rem 1rem;
+}
+
+.inv-select select {
+  color: #575c62;
+  font-size: 14px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  height: 100%;
+}
+
+.inv-textarea {
+  font-size: 14px;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-wrapper {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .gap-wrapper {
+    padding: 4rem 2rem;
+  }
+  .footer-wrapper,
+  .thank-wrapper,
+  .location-wrapper,
+  .bride-wrapper,
+  .story-wrapper {
+    padding: 2.5rem 2rem;
+  }
+
+  .rsvp-card {
+    width: 100%;
+  }
+
+  .inv-image img {
+    width: 25vw;
+  }
+  .bride-photo {
+    padding-left: 0;
+  }
+
+  .bride-wrapper .row div,
+  .bride-profile {
+    padding: 0;
+  }
+  .bride-profile {
+    padding-left: 2rem !important;
+  }
+  .column-3 {
+    width: 100%;
+  }
+  .gallery-wrapper {
+    padding: 2rem 2rem;
+  }
+  .grid.grid-parent {
+    padding-bottom: 0;
+  }
+  .location-ltblue {
+    text-align: center;
+  }
+  .location-titler {
+    margin-top: 2rem;
+  }
+  .location-subtitler .wide-p {
+    text-align: center;
+    width: 100%;
+  }
+  .location-subtitler .wide-p:hover {
+    border: none;
+  }
+  .column-2.footer-data {
+    width: 100%;
+  }
+}
+
+.modal-content {
+  width: auto;
+}
+
+.modal-content .inv-image img {
+  width: auto;
+  max-width: 60vw;
+}
+
+.inv-envelope {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/wallpaper.jpg");
+}
+
+.video-wrapper {
+  padding: 3rem 6rem;
+}
+
+@media screen and (max-width: 1600px) {
+  .video-wrapper {
+    padding: 6rem 8rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .video-wrapper {
+    padding: 2rem 4rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .video-wrapper {
+    padding: .75rem 1.5rem;
+  }
+}

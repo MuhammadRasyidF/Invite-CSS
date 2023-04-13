@@ -1,0 +1,195 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+/* https://img.freepik.com/free-vector/golden-lines-background-premium-styles_1017-37444.jpg?w=1060&t=st=1676478847~exp=1676479447~hmac=62e99ad514704fabe61acc82a5233085d9fe9740b4ac660d6918b4f72bc0afba */
+/* https://img.freepik.com/free-vector/abstract-golden-wave-dark-background_52683-22163.jpg?w=996&t=st=1676383856~exp=1676384456~hmac=47aa283988db72faeb6ad6d4fadff4d63462385f026baf4b66af77b870485911 */
+/* https://img.freepik.com/free-vector/christmas-banner-with-glittery-gold-sparkle-design_1048-14945.jpg?w=1380&t=st=1676476896~exp=1676477496~hmac=71ecabc3e84a07c4a17ab054a613fa0995b162a7377052bff967b153fe145c19 */
+
+.first-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../image/B0.jpg");
+    background-size: cover;
+    text-align: center;
+}
+
+
+.first-banner .title{
+    font-size: 65px;
+    color: #ffe285;
+    font-family: 'Dancing Script', cursive;
+}
+
+.first-banner .subtitle{
+    font-size: 17px;
+    color: #ffe285;
+}
+
+.first-banner .inv-button{
+  height: 50px;
+  width: 110px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
+  background-color: transparent;
+  border: 2px solid #f0c433;
+  color: #ffe285;
+  border-radius: 30px;
+}
+
+.first-banner .inv-button:hover{
+    background-color: #f0c433;
+    color: #000000;
+}
+
+.second-banner {
+    white-space: nowrap;
+    background: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.second-banner .title{
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    color: #f0c433;
+}
+.second-banner .subtitle{
+    margin-top: 10px;
+    color: #f0c433;
+}
+
+.third-banner{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../image/maxresdefault.jpg");
+    text-align: center;
+}
+
+.fourth-banner {
+    background: url("../image/B4.png");
+    background-size: cover;
+}
+
+.fourth-banner .row .column-2{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fourth-banner .title{
+    font-family: 'Dancing Script', cursive;
+    margin-left: 15vh;
+    margin-top: 5vh;
+    text-align: left;
+    color: #ffe285;
+}
+
+.fourth-banner .subtitle{
+    margin-left: 15vh;
+    text-align: justify;
+    color: #ffe285;
+}
+
+.fifth-banner {
+    white-space: nowrap;
+    background: url("../image/B5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.fifth-banner .title{
+    color: #ffe285;
+}
+
+.grid-wrapper {
+    margin-top: 1.5rem;
+    padding-left: 25rem;
+    padding-right: 25rem;
+    color: #ffe285;
+    font-weight: 700;
+    font-size: 54px;
+  }
+
+.countdown-text {
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+.sixth-banner{
+    background-color: #000000;
+}
+
+.sixth-banner .title{
+    margin-top: 15vh;
+    font-size: 10vh;
+    color: #ffe285;
+    font-family: 'Dancing Script', cursive;
+}
+
+.sixth-banner .subtitle{
+    font-size: 4vh;
+    text-align: justify;
+    font-family: 'Dancing Script', cursive;
+    color: #ffe285;
+}
+
+.sixth-banner .column-3 .map{
+    margin-left: 10vh;
+    border-radius: 50%;
+}
+
+.seventh-banner{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../image/rm428-0041.jpg");
+}
+
+.inv-card{
+    background-color: #676666;
+}
+
+.form-title {
+    color: white;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 22px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+.eighth-banner{
+    background-color: #000000;
+    text-align: center;
+}
+
+.eighth-banner .title{
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    color: #f0c433;
+}
+.eighth-banner .subtitle{
+    margin-top: 10px;
+    color: #f0c433;
+}
+
+.video-wrapper{
+    width: 100%;
+    padding: 5rem 4rem;
+}
