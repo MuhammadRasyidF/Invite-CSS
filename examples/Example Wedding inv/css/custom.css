@@ -12,7 +12,7 @@ body {
 
 .banner-first {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://media.tenor.com/Q5J4v3mEz-UAAAAd/spy-x-family-proposal.gif");
+    url("https://images.squarespace-cdn.com/content/v1/5d9deb0877db1c1a1967abbd/1617283203154-RL1HA4AXWSTB0G7RRN7A/WICKLOW+PRE-WEDDING+PHOTO_VIDEO-high.gif?format=1500w");
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -96,7 +96,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://pic-bstarstatic.akamaized.net/ugc/adb89849a5d93c8904e15eaa5dfd8720.jpeg");
+    url("https://ajaib-wp-s3-artifact.s3.ap-southeast-1.amazonaws.com/img/2022/02/13004151/foto-prewedding.jpg");
   color: white;
   font-size: 30px;
 }
@@ -432,6 +432,6 @@ body {
 
 @media screen and (max-width: 400px) {
   .video-wrapper {
-    padding: .75rem 1.5rem;
+    padding: 0.75rem 1.5rem;
   }
 }
